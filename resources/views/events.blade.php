@@ -23,7 +23,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Section: event calendar -->
     @livewire('web.event-list')
 @endsection
