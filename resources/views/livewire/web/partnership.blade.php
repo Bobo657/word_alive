@@ -105,16 +105,22 @@
                         <label class="form-label">How would you like us to contact you</label>
                         <div class="checkbox mt-5">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" wire:model.lazy="sms" value="1">
+                                <input type="checkbox" id="inlineCheckbox1" wire:model="sms" value="1">
                                 SMS</label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox2" wire:model.lazy="call" value="1">
+                                <input type="checkbox" id="inlineCheckbox2" wire:model="call" value="1">
                                 Phone Call</label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" wire:model.lazy="mail" id="inlineCheckbox3" value="1">
+                                <input type="checkbox" wire:model="mail" id="inlineCheckbox3" value="1">
                                 Email 
                             </label>
                         </div>
+                        @error('call') 
+                            <span class="text-danger">
+                                {{ $message }}
+                            </span>
+                        @enderror
+
                       </div>
                     </div>
                    

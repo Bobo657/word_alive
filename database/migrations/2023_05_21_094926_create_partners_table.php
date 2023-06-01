@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('phone');
             $table->string('address');
             $table->string('plan');
-            $table->boolean('mail');
-            $table->boolean('sms');
-            $table->boolean('call');
+            $table->boolean('mail')->nullable();
+            $table->boolean('sms')->nullable();
+            $table->boolean('call')->nullable();
             $table->timestamps();
         });
     }
