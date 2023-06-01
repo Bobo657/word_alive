@@ -9,7 +9,6 @@ class WebsiteController extends Controller
 {
     public function verifyPayment()
     {
-        
         $trxref = request()->query('trxref');
         $reference = request()->query('reference');
 
