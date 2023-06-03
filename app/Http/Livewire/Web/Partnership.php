@@ -36,6 +36,7 @@ class Partnership extends Component
 
     public function savePartner()
     {
+    
         $validatedData = $this->validate();
         Partner::create($validatedData);
 
@@ -50,3 +51,4 @@ class Partnership extends Component
         ->section('content');
     }
 }
+ 

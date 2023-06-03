@@ -54,6 +54,7 @@ class Events extends Component
             $event->delete();
         }
 
+        $event->delete();
         session()->flash('message', 'Event deleted successfully from database.');
         $this->reset('recordId');
     }

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-push-3">
-            <h4 class="mt-0 pt-5"> Donation details</h4>
+            <h4 class="mt-0 pt-5"> Donation Form </h4>
             <hr>
             <form id="paypal_donate_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <div class="row">

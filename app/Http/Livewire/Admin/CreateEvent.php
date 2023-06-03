@@ -47,21 +47,15 @@ class CreateEvent extends Component
             $event->photo = $photoPath;
         }
 
-        try{
-            // Save the event to the database
-            $event->save();
-            // Reset form fields
-            $this->reset();
-            //close modal
-            $this->emit('closeModals', '#createEvent');
-            // Emit an event to indicate successful event creation
-            $this->emit('eventUpdated', 'New event successfully added to database.');
-        } catch (\Exception $e) {
-            // $this->dispatchBrowserEvent('display-notification', [
-            //     'message' => $e->getMessage(),
-            //     'variant' => 'error'
-            // ]);
-        } 
+        // Save the event to the database
+        $event->save();
+        // Reset form fields
+        $this->reset();
+        //close modal
+        $this->emit('closeModals', '#createEvent');
+        // Emit an event to indicate successful event creation
+        $this->emit('eventUpdated', 'New event successfully added to the database.');
+       
     }
 
     public function render()

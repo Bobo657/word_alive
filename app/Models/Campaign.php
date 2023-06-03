@@ -10,4 +10,8 @@ class Campaign extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function donations(){
+        return $this->hasMany(Donation::class);
+    }
 }

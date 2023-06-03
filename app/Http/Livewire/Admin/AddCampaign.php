@@ -20,21 +20,14 @@ class AddCampaign extends Component
         $campaign = new Campaign();
         $campaign->name = $validatedData['name'];
       
-        try{
-            // Save the campaign to the database
-            $campaign->save();
-            // Reset form fields
-            $this->reset();
-            //close modal
-            $this->emit('closeModals', '#createCampaign');
-            // Emit an campaign to indicate successful campaign creation
-            $this->emit('campaignUpdated', 'New campaign successfully added to database.');
-        } catch (\Exception $e) {
-            // $this->dispatchBrowsercampaign('display-notification', [
-            //     'message' => $e->getMessage(),
-            //     'variant' => 'error'
-            // ]);
-        } 
+        // Save the campaign to the database
+        $campaign->save();
+        // Reset form fields
+        $this->reset();
+        //close modal
+        $this->emit('closeModals', '#createCampaign');
+        // Emit an campaign to indicate successful campaign creation
+        $this->emit('campaignUpdated', 'New campaign successfully added to the database.');
     }
     
     public function render()

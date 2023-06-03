@@ -25,7 +25,7 @@
                     <div class="card-body">
 
                         <div class="row">
-                            @if (!empty($youtube))
+                            @if (cache()->get('youtube'))
                                 <div class="alert alert-primary left-icon-big alert-dismissible fade show">
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"><span><i class="fa-solid fa-xmark"></i></span>
                                     </button>
@@ -42,7 +42,7 @@
                                 </div>
                             @endif
                             <div class="mb-3 col-md-9">
-                                <input placeholder="Youtube Video ID" type="text" wire:model.lazy="youtube" class="form-control">
+                                <input placeholder="Youtube Video ID" type="text" wire:model="youtube" class="form-control">
                                 @error('youtube') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                             <div class="mb-3 col-md-3 mt-1">
@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="row">
-                            @if (!empty($facebook))
+                        @if (cache()->get('facebook'))
                                 <div class="alert alert-primary left-icon-big alert-dismissible fade show">
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close"><span><i class="fa-solid fa-xmark"></i></span>
                                     </button>

@@ -17,24 +17,11 @@ class DepartmentCreate extends Component
     {
         $validatedData = $this->validate();
 
-        $department = new Department();
-        $department->name = $validatedData['name'];
-      
-        try{
-            // Save the department to the database
-            $department->save();
-            // Reset form fields
-            $this->reset();
-            //close modal
-            $this->emit('closeModals', '#createDepartment');
-            // Emit an department to indicate successful department creation
-            $this->emit('departmentUpdated', 'New department successfully added to database.');
-        } catch (\Exception $e) {
-            // $this->dispatchBrowserdepartment('display-notification', [
-            //     'message' => $e->getMessage(),
-            //     'variant' => 'error'
-            // ]);
-        } 
+        Department::create($validatedData);
+
+        $this->reset();
+        $this->emit('closeModals', '#createDepartment');
+        $this->emit('departmentUpdated', 'New department successfully added to the database.');
     }
 
     public function render()

@@ -12,26 +12,25 @@ class DepartmentsList extends Component
         'removeSelectedDepartment' => 'deleteDepartment'
     ];
 
-    public $actions = ['action' => 'removeSelectedDepartment'];
     public $departments;
     public $recordId;
-      
-    public function confirmDelete(Department $deparment)
+
+    public function confirmDelete(Department $department)
     {
-        $this->recordId = $deparment->id;
-        $this->dispatchBrowserEvent('delete-notify', $this->actions);
+        $this->recordId = $department->id;
+        $this->dispatchBrowserEvent('delete-notify', ['action' => 'removeSelectedDepartment']);
     }
 
     public function deleteDepartment()
     {
-        $deparment = Department::findOrFail($this->recordId)->delete();
+        Department::findOrFail($this->recordId)->delete();
 
-        session()->flash('message', 'Department deleted from database');
+        session()->flash('message', 'Department deleted from the database');
         $this->reset('recordId');
     }
 
-
-    public function showResponse($message){
+    public function showResponse($message)
+    {
         session()->flash('message', $message);
     }
 

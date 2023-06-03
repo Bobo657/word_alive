@@ -4,17 +4,65 @@ namespace Tests\Feature\Livewire\Admin;
 
 use App\Http\Livewire\Admin\AddMember;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Livewire\Livewire;
 use Tests\TestCase;
 
 class AddMemberTest extends TestCase
 {
-    /** @test */
-    public function the_component_can_render()
-    {
-        $component = Livewire::test(AddMember::class);
+    use RefreshDatabase;
 
-        $component->assertStatus(200);
+    /** @test */
+    public function it_can_render_add_member_component()
+    {
+        Livewire::test(AddMember::class)
+            ->assertViewIs('livewire.admin.add-member')
+            ->assertSee('Register Member');
+    }
+
+    /** @test */
+    public function it_can_save_member()
+    {
+        Livewire::test(AddMember::class)
+            ->set('name', 'John Doe')
+            ->set('email', 'johndoe@example.com')
+            ->set('phone', '07035205714')
+            ->set('marital_status', 'single')
+            ->set('gender', 'male')
+            ->set('address', '123 Example St')
+            ->set('dob', '1990-01-01')
+            ->call('saveMember')
+            ->assertEmitted('closeModals', '#registerMember')
+            ->assertEmitted('memberUpdated', 'New member successfully added to the database.');
+
+        $this->assertDatabaseHas('members', [
+            'name' => 'John Doe',
+            'email' => 'johndoe@example.com',
+            'phone' => '07035205714',
+            'marital_status' => 'single',
+            'gender' => 'male',
+            'address' => '123 Example St'
+        ]);
+    }
+
+    /** @test */
+    public function it_can_validate_required_fields()
+    {
+        Livewire::test(AddMember::class)
+            ->call('saveMember')
+            ->assertHasErrors(['name', 'email', 'phone', 'marital_status', 'gender', 'address', 'dob']);
+    }
+
+    /** @test */
+    public function it_can_validate_email_field()
+    {
+        Livewire::test(AddMember::class)
+            ->set('email', 'invalid-email')
+            ->call('saveMember')
+            ->assertHasErrors(['email']);
+
+        Livewire::test(AddMember::class)
+            ->set('email', 'valid-email@example.com')
+            ->call('saveMember')
+            ->assertHasNoErrors(['email']);
     }
 }

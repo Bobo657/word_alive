@@ -32,7 +32,7 @@ class PartnerUpdate extends Component
             'address' => 'required|string|max:255',
             'plan' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:partners,email,' . $this->partnerId,
-            'phone' => 'required|unique:partners,phone,' . $this->partnerId,
+            'phone' => 'required|regex:/^0[0-9]{10}$/|numeric|unique:partners,phone,' . $this->partnerId,
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
@@ -48,13 +48,15 @@ class PartnerUpdate extends Component
         $this->last_name = $partner->last_name;
         $this->email = $partner->email;
         $this->address = $partner->address;
-        $this->sms = $partner->sms;
-        $this->call = $partner->call;
-        $this->mail = $partner->mail;
         $this->prefix = $partner->prefix;
         $this->plan = $partner->plan;
-
+        $this->sms = $partner->sms == 1 ? 1 : '';
+        $this->call = $partner->call == 1 ? 1 : '';
+        $this->mail = $partner->mail == 1 ? 1 : '';
+        
         $this->emit('showModal', 'partnerUpdate');
+
+        
     }
 
     public function partnerUpdate()
@@ -65,9 +67,9 @@ class PartnerUpdate extends Component
         $partner->phone = $validatedData['phone'];
         $partner->first_name = $validatedData['first_name'];
         $partner->last_name = $validatedData['last_name'];
-        $partner->sms = $validatedData['sms'];
-        $partner->call = $validatedData['call'];
-        $partner->mail = $validatedData['mail'];
+        $partner->sms = (int)$validatedData['sms'];
+        $partner->call = (int)$validatedData['call'];
+        $partner->mail = (int)$validatedData['mail'];
         $partner->plan = $validatedData['plan'];
         $partner->prefix = $validatedData['prefix'];
         $partner->address = $validatedData['address'];

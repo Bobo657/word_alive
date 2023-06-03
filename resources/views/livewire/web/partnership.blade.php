@@ -10,7 +10,7 @@
                   <h4 class="text-theme-colored text-uppercase m-0">Partnership Form</h4>
                  
                   <div class="line-bottom mb-30"></div>
-                  @if (session()->has('message'))
+                    @if (session()->has('message'))
                     <div class="alert alert-success alert-dismissable">
                         <button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>
                         Success! {{ session('message') }}.

@@ -165,11 +165,13 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    {{ $members->links('components.pagination_links') }}
-                                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
-                                        Showing {{ $members->currentpage() }} to {{ $members->currentpage() * $members->perpage() }}  of  {{ $members->total() }} entries
+                            <div class="row">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        {{ $members->links('components.pagination_links') }}
+                                        <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                            Showing {{ $members->currentpage() }} to {{ $members->currentpage() * $members->perpage() }}  of  {{ $members->total() }} entries
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -179,10 +181,9 @@
                 </div>
             </div>
         </div>
-    
     </div>
 
-    @livewire('admin.add-member');
-    @livewire('admin.member-update');
-    @livewire('admin.member-assign-department');
+    @livewire('admin.add-member')
+    @livewire('admin.member-update')
+    @livewire('admin.member-assign-department')
 </div>

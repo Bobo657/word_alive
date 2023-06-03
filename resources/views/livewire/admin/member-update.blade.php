@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <label class="form-label">Name<span class="text-danger">*</span></label>
-                    <input wire:model.defer="name" type="text" class="form-control " placeholder="Uche Joe">
+                    <input wire:model.lazy="name" type="text" class="form-control " placeholder="Uche Joe">
                     @error('name') 
                     <span class="text-danger">
                         {{ $message }}
@@ -20,7 +20,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Marital Status<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <select wire:model.defer="marital_status" class="default-select form-control wide mb-3" tabindex="null">
+                                <select wire:model.lazy="marital_status" class="default-select form-control wide mb-3" tabindex="null">
                                     <option value="">Select marital status </option>
                                     <option value="married">Married</option>
                                     <option value="single">Single</option>
@@ -36,7 +36,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Date of Birth<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input wire:model.defer="dob" type="date" class="form-control" placeholder="Surname">
+                                <input wire:model.lazy="dob" type="date" class="form-control" placeholder="Surname">
                             </div>
                             @error('dob') 
                             <span class="text-danger">
@@ -50,7 +50,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Email<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input wire:model.defer="email" type="email" class="form-control" placeholder="example@gmail.com">
+                                <input wire:model.lazy="email" type="email" class="form-control" placeholder="example@gmail.com">
                             </div>
                             @error('email') 
                             <span class="text-danger">
@@ -61,7 +61,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Phone Number<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input wire:model.defer="phone" type="tel" class="form-control" placeholder="08067057474">
+                                <input wire:model="phone" type="tel" class="form-control" placeholder="08067057474">
                             </div>
                             @error('phone') 
                             <span class="text-danger">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="mt-3 invite">
                         <label class="form-label">Address<span class="text-danger">*</span></label>
-                        <input wire:model.defer="address" type ="text" class="form-control " placeholder="">
+                        <input wire:model.lazy="address" type ="text" class="form-control " placeholder="">
                         @error('address') 
                             <span class="text-danger">
                                 {{ $message }}

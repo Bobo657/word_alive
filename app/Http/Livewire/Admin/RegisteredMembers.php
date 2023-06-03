@@ -31,26 +31,34 @@ class RegisteredMembers extends Component
         $startDate = Carbon::now()->subDays(30);
 
         $this->stats = Member::select(
-                            DB::raw("COUNT(*) AS total_members,
-                                SUM(CASE WHEN gender = 'male' THEN 1 ELSE 0 END) AS total_male,
-                                SUM(CASE WHEN marital_status = 'married' THEN 1 ELSE 0 END) AS total_married,
-                                SUM(CASE WHEN marital_status = 'single' THEN 1 ELSE 0 END) AS total_single,
-                                COUNT(CASE WHEN created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_members_days,
-                                COUNT(CASE WHEN gender = 'male' AND created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_male_days,
-                                COUNT(CASE WHEN marital_status = 'single' AND created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_single_days,
-                                COUNT(CASE WHEN marital_status = 'married' AND created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_married_days
-                            ")
-                      )->first();
+            DB::raw("COUNT(*) AS total_members,
+                SUM(CASE WHEN gender = 'male' THEN 1 ELSE 0 END) AS total_male,
+                SUM(CASE WHEN marital_status = 'married' THEN 1 ELSE 0 END) AS total_married,
+                SUM(CASE WHEN marital_status = 'single' THEN 1 ELSE 0 END) AS total_single,
+                COUNT(CASE WHEN created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_members_days,
+                COUNT(CASE WHEN gender = 'male' AND created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_male_days,
+                COUNT(CASE WHEN marital_status = 'single' AND created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_single_days,
+                COUNT(CASE WHEN marital_status = 'married' AND created_at >= '{$startDate}' THEN 1 ELSE NULL END) AS new_married_days
+            ")
+        )->first();
 
-        $percentageIncreaseMembers = ($this->stats->new_members_days / $this->stats->total_members) * 100;
-        $percentageMaleIncreaseMembers = ($this->stats->new_male_days / $this->stats->total_members) * 100;
-        $percentageSingleIncreaseMembers = ($this->stats->new_single_days / $this->stats->total_members) * 100;
-        $percentageMarriedIncreaseMembers = ($this->stats->new_married_days / $this->stats->total_members) * 100;
+        $percentageIncreaseMembers = 0;
+        $percentageMaleIncreaseMembers = 0;
+        $percentageSingleIncreaseMembers = 0;
+        $percentageMarriedIncreaseMembers = 0;
+
+        if ($this->stats->total_members > 0) {
+            $percentageIncreaseMembers = ($this->stats->new_members_days / $this->stats->total_members) * 100;
+            $percentageMaleIncreaseMembers = ($this->stats->new_male_days / $this->stats->total_members) * 100;
+            $percentageSingleIncreaseMembers = ($this->stats->new_single_days / $this->stats->total_members) * 100;
+            $percentageMarriedIncreaseMembers = ($this->stats->new_married_days / $this->stats->total_members) * 100;
+        }
 
         $this->stats->new_members_days = round($percentageIncreaseMembers, 2);
         $this->stats->new_male_days = round($percentageMaleIncreaseMembers, 2);
         $this->stats->new_single_days = round($percentageSingleIncreaseMembers, 2);
         $this->stats->new_married_days = round($percentageMarriedIncreaseMembers, 2);
+
 
     }
 

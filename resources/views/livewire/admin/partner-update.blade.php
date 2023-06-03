@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-center">
     <div class="modal-content">
         <div class="modal-header">
-        <h1 class="modal-title fs-5" id="partnerUpdate">Update Member</h1>
+        <h1 class="modal-title fs-5" id="partnerUpdate">Update Partner</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -96,21 +96,21 @@
                             <div class="mb-3">
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                        <input type="checkbox" wire:model.defer="sms" class="form-check-input" value="1">SMS
+                                        <input type="checkbox" wire:model="sms" class="form-check-input" >SMS {{ $sms ? 'checked' : '' }}
                                     </label>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                        <input type="checkbox" wire:model.defer="call" class="form-check-input" value="1">Phone Call
+                                        <input type="checkbox" wire:model="call" class="form-check-input" >Phone Call 
                                     </label>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label">
-                                        <input type="checkbox" wire:model.defer="mail" class="form-check-input" value="1">Email
+                                        <input type="checkbox" wire:model="mail"   class="form-check-input">Email 
                                     </label>
                                 </div>
                             </div>

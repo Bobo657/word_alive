@@ -32,18 +32,11 @@ class AddMember extends Component
     {
         $data = $this->validate();
 
-        try{
-            Member::create($data);
-            $this->emit('closeModals', '#registerMember');
-            $this->reset();
-            $this->emit('memberUpdated', 'New member successfully added to database.');
-        } catch (\Exception $e) {
-            // $this->dispatchBrowserEvent('display-notification', [
-            //     'message' => $e->getMessage(),
-            //     'variant' => 'error'
-            // ]);
+        Member::create($data);
+        $this->reset();
+        $this->emit('closeModals', '#registerMember');
+        $this->emit('memberUpdated', 'New member successfully added to the database.');
        
-        } 
     }
 
     public function render()

@@ -22,7 +22,7 @@
                         <td>
                             <p class="mb-0 ms-2">{{ $campaign->name }}</p>	
                         </td>
-                        <td class="text-left">{{ number_format($campaign->members_count) }}</td>
+                        <td class="text-left">&#8358;{{ number_format($campaign->donations_sum_amount) }}</td>
                         <td class="pe-0 text-center">
                             <div class="action-button">
                                 <button wire:click.prevent="$emit('setCampaign', {{ $campaign->id}})" type="button" class="btn btn-primary btn-icon-xxs">

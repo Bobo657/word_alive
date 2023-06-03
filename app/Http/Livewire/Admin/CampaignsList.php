@@ -53,7 +53,7 @@ class CampaignsList extends Component
 
     public function render()
     {
-        $campaigns = Campaign::query()
+        $campaigns = Campaign::query()->withSum('donations', 'amount')
         ->when(!empty($this->search), function ($q) {
             $q->where('name', 'LIKE', "%{$this->search}%");
         })

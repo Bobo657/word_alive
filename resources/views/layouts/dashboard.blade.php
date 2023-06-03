@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<meta name="robots" content="">
+	<link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+	<link href="/images/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="/images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+	<link href="/images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+	<link href="/images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="The total transformation and restoration of lives and family destinies, creating the path to honour,glory and dignity, through the teaching and preaching of God’s Word in the demonstration of the Power of the Holy Spirit">
 	<meta property="og:title" content="The total transformation and restoration of lives and family destinies, creating the path to honour,glory and dignity, through the teaching and preaching of God’s Word in the demonstration of the Power of the Holy Spirit">
@@ -25,7 +27,6 @@
 	<link href="/admin/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 	@livewireStyles
     @livewireScripts
-	
 </head>
 <body>
 

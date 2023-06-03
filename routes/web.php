@@ -29,6 +29,11 @@ Route::view('/our_pastors', 'pastors');
 Route::view('/about_us', 'about');
 Route::view('/events', 'events');
 Route::view('/ministries', 'ministries');
+Route::get('/member/register', MemberRegistration::class)->name('member.register');
+Route::get('/partner/donation', MemberRegistration::class)->name('partner.donation');
+Route::get('/donation/join', Partnership::class)->name('partner.join');
+Route::view('/donate', 'donate')->name('donate');
+Route::get('/verify/payment', [WebsiteController::class, 'verifyPayment']);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/members/list', RegisteredMembers::class)->name('members.list');
@@ -41,10 +46,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/donations/list', DonationList::class)->name('donations.list');
 });
 
-Route::get('/member/register', MemberRegistration::class)->name('member.register');
-Route::get('/partner/donation', MemberRegistration::class)->name('partner.donation');
-Route::get('/donation/join', Partnership::class)->name('partner.join');
-Route::view('/donate', 'donate')->name('donate');
 
-Route::get('/verify/payment', [WebsiteController::class, 'verifyPayment']);
 

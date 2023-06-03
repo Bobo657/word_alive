@@ -18,7 +18,7 @@ class MemberRegistration extends Component
 
     protected $rules = [
         'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255',
+        'email' => 'required|email|max:255|unique:members,email',
         'phone' => 'required|numeric|unique:members,phone|regex:/^0[0-9]{10}$/',
         'marital_status' => 'required|in:single,married,divorced',
         'gender' => 'required|in:male,female',
@@ -29,19 +29,9 @@ class MemberRegistration extends Component
     public function saveMember()
     {
         $data = $this->validate();
-
-        try{
-
-            Member::create($data);
-            $this->reset();
-            session()->flash('message', 'Your registration was successful.');
-
-        } catch (\Exception $e) {
-            // $this->dispatchBrowserEvent('display-notification', [
-            //     'message' => $e->getMessage(),
-            //     'variant' => 'error'
-            // ]);
-        } 
+        Member::create($data);
+        $this->reset();
+        session()->flash('message', 'Your registration was successful.');
     }
 
     public function render()

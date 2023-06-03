@@ -20,6 +20,8 @@ return [
 
     'Template' => 'Savehyip',
 
+    'adminTemplate' => 'w3crm',
+
     'address' => "Parcel 18, A1 Close, 1st Avenue, Gwarinpa, Abuja (Between Drumstix and Old Diamond Bank)",
 
     'email' => "contact@wacint.org",
