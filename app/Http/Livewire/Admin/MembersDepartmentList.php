@@ -15,7 +15,6 @@ class MembersDepartmentList extends Component
         'removeMemberFromDepartment' => 'removeMemberFromDepartment'
     ];
 
-
     public $search;
     public $departmentID;
     public $departments;

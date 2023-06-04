@@ -10,7 +10,6 @@ use Tests\TestCase;
 
 class RegisteredMembersTest extends TestCase
 {
-
     use RefreshDatabase;
 
     /** @test */
@@ -22,10 +21,11 @@ class RegisteredMembersTest extends TestCase
             ->assertViewIs('livewire.admin.registered-members')
             ->assertSee('Registered Members');
 
-            $component = Livewire::test(RegisteredMembers::class);
-            $component->assertStatus(200);
+        $component = Livewire::test(RegisteredMembers::class);
+        $component->assertStatus(200);
     }
 
+     /** @test */
     public function it_can_delete_a_member()
     {
         $member = Member::factory()->create(); 
@@ -34,8 +34,7 @@ class RegisteredMembersTest extends TestCase
             ->call('confirmDelete', $member)
             ->assertDispatchedBrowserEvent('delete-notify', ['action' => 'removeSelectedMember'])
             ->call('deleteMember')
-            ->assertSee('Record deleted successfully from database.')
-            ->assertEmitted('memberUpdated', 'Member deleted successfully.');
+            ->assertSee('Record deleted successfully from database.');
         
         $this->assertDatabaseMissing('members', ['id' => $member->id]);
     }

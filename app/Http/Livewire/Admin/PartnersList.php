@@ -57,7 +57,8 @@ class PartnersList extends Component
     {
         $partners = Partner::query()
                     ->when(!empty($this->search), function ($q) {
-                        $q->where('name', 'LIKE', "%{$this->search}%");
+                        $q->where('first_name', 'LIKE', "%{$this->search}%")
+                            ->orWhere('last_name', 'LIKE', "%{$this->search}%");
                     })
                     ->paginate($this->noOfRecords);
 

@@ -46,8 +46,8 @@ class DonationList extends Component
 
     public function deleteDonation()
     {
-        $donation = Donation::findOrFail($this->recordId)->delete();
-        session()->flash('message', 'Donation deleted successfully from database.');
+        Donation::findOrFail($this->recordId)->delete();
+        session()->flash('message', 'Donation successfully deleted from the database.');
         $this->reset('recordId');
     }
 

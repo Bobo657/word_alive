@@ -11,9 +11,7 @@ class EventUpdate extends Component
 {
     use WithFileUploads;
 
-    protected $listeners = [
-        'setEvent' => 'setEvent',
-    ];
+    protected $listeners = ['setEvent' => 'setEvent'];
 
     public $eventId;
     public $photo;

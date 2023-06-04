@@ -17,19 +17,13 @@ class MemberAssignDepartment extends Component
     public $name;
     public $departmentId;
    
-    
-    public function mount()
-    {
-        
-    }
-
+   
     public function assignDepartment(Member $member)
     {
         $this->reset();
         $this->memberId = $member->id;
         $this->name = $member->name;
         
-
         $this->emit('showModal', 'assignDepartment');
     }
 

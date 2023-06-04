@@ -31,8 +31,8 @@ class PartnerUpdate extends Component
             'prefix' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'plan' => 'required|string|max:255',
-            'email' => 'required|email|max:255|unique:partners,email,' . $this->partnerId,
-            'phone' => 'required|regex:/^0[0-9]{10}$/|numeric|unique:partners,phone,' . $this->partnerId,
+            'email' => 'required|email|max:255|unique:partners,email,'.$this->partnerId,
+            'phone' => 'required|regex:/^0[0-9]{10}$/|numeric|unique:partners,phone,'.$this->partnerId,
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
@@ -73,12 +73,15 @@ class PartnerUpdate extends Component
         $partner->plan = $validatedData['plan'];
         $partner->prefix = $validatedData['prefix'];
         $partner->address = $validatedData['address'];
+        $partner->email = $validatedData['email'];
 
         // Save the updated member to the database
         $partner->save();
+       
 
         // Emit a member to indicate successful member update
         $this->emit('closeModals', '#partnerUpdate');
+        
         $this->emit('partnerUpdated', 'Partner record updated successfully');
         $this->reset();
     }
