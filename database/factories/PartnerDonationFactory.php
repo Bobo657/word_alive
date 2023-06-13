@@ -22,7 +22,7 @@ class PartnerDonationFactory extends Factory
             'reference' => $this->faker->unique()->randomNumber(),
             'amount' => $this->faker->numberBetween(100, 10000),
             'channel' => $this->faker->randomElement(['Card', 'USD']),
-            'staus' => $this->faker->randomElement(['failed', 'success']),
+            'status' => $this->faker->randomElement(['failed', 'success']),
             'authorization' => json_encode([
                 "authorization_code" => "AUTH_hhw5ije9fp",
                 "bin" => "408408",
@@ -35,7 +35,7 @@ class PartnerDonationFactory extends Factory
                 "country_code" => "NG",
                 "brand" => "visa",
                 "reusable" => true,
-                "signature" => "SIG_uK1oSteBTGy2aqWLT1yk",
+                "signature" => "SuK1oSteBTGy2aqWLT1yk",
                 "account_name" => null,
                 "receiver_bank_account_number" => null,
                 "receiver_bank" => null
