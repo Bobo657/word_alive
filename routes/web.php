@@ -48,7 +48,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 });
 
 
-Route::middleware(['notGuard', 'auth:partner'])->group(function () {
+Route::middleware(['auth:partner'])->group(function () {
     Route::get('partner/dashboard', PartnerDashboard::class)->name('partner.dashboard');
 });
 
