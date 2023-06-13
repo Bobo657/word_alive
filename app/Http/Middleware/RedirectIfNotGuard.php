@@ -16,13 +16,11 @@ class RedirectIfNotGuard
      */
     public function handle(Request $request, Closure $next): Response
     {
-    
 
         if (!Auth::check() || !Auth::guard('partner')->check()) {
             return redirect()->route('partner.login');
         }
 
-     
         return $next($request);
       
     }

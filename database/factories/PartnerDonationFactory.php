@@ -21,6 +21,7 @@ class PartnerDonationFactory extends Factory
             'partner_id' => random_int(1, 20),
             'reference' => $this->faker->unique()->randomNumber(),
             'amount' => $this->faker->numberBetween(100, 10000),
+            'channel' => $this->faker->randomElement(['Card', 'USD']),
             'authorization' => json_encode([
                 "authorization_code" => "AUTH_hhw5ije9fp",
                 "bin" => "408408",
