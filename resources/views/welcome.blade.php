@@ -362,8 +362,8 @@
             <div class="col-sm-12 col-md-4 pl-0 pl-sm-15 pr-0 pr-sm-15 sm-height-auto mt-sm-0 wow fadeInLeft animation-delay2">
             <div class="sm-height-auto bg-theme-colored-darker2">
                 <div class="p-30">
-                <h3 class="text-uppercase text-white mt-0">Join Us</h3>
-                <a href="{{ route('member.register') }}" class="btn btn-border btn-circled btn-transparent btn-xs mt-5">Join us</a>
+                <h3 class="text-uppercase text-white mt-0">Become a Partner</h3>
+                <a href="{{ route('partner.join') }}" class="btn btn-border btn-circled btn-transparent btn-xs mt-5">Become a Partner</a>
                 </div>
                 <i class="flaticon-charity-home-insurance bg-icon"></i>
             </div>

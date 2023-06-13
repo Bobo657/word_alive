@@ -2,45 +2,31 @@
 
 namespace App\Http\Livewire\Web;
 
-use App\Models\Campaign;
-use Illuminate\Support\Facades\Redirect;
 use Livewire\Component;
+use Illuminate\Support\Facades\Redirect;
 
-class DonationForm extends Component
+class PartnerMakePayment extends Component
 {
-    public $phone;
-    public $name;
+
     public $amount;
-    public $campaign_id;
-    public $email;
-    public $address;
-    public $message;
-    public $campaigns;
-  
+    public $date;
+
     public function rules()
     {
         return[
-            'name' => 'required|string|max:255',
-            'message' => 'nullable|string|max:255',
-            'campaign_id' => 'required|integer',
-            'address' => 'required|string|max:255',
-            'email' => 'required|email|max:255|',
-            'phone' => 'required|numeric|regex:/^0[0-9]{10}$/',
+            'date' => 'required|date',
             'amount' => 'required|integer|min:199',
         ];
     }
 
-    public function mount(){
-        $this->campaigns = Campaign::all();
-    }
-
     public function makeDonation()
     {
+
         $validatedData = $this->validate();
         $url = "https://api.paystack.co/transaction/initialize";
 
         $fields = [
-            'email' =>  $this->email,
+            'email' =>  auth('partner')->user()->email,
             'amount' => $this->amount * 100,
             'metadata' => $validatedData
         ];
@@ -78,8 +64,9 @@ class DonationForm extends Component
         }
     }
 
+
     public function render()
     {
-        return view('livewire.web.donation-form');
+        return view('livewire.web.partner-make-payment');
     }
 }

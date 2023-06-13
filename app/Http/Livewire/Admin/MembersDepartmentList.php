@@ -12,7 +12,8 @@ class MembersDepartmentList extends Component
     use  WithPagination;
 
     protected $listeners = [
-        'removeMemberFromDepartment' => 'removeMemberFromDepartment'
+        'removeMemberFromDepartment' => 'removeMemberFromDepartment',
+        'memberDepartmentUpdated' => 'render'
     ];
 
     public $search;

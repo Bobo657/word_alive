@@ -36,7 +36,43 @@ return [
 
     'plans' => ['Monthly', 'Quarterly', 'Yearly'],
 
+    'marital_status' => ['single', 'married', 'divorced', 'widowed'],
 
+    'classes' => [ 
+        'AMMC' => 'Alive membership and maturity class',
+        'ALMA' => 'Alive Leadership and Leadership Academy'
+    ],
+
+    'church_areas' =>  [
+        'Airport road - Abuja',
+      	'Apo - Abuja',
+        'Bwari - Abuja', 
+        'Dawaki - Abuja',
+    	'Dei dei - Abuja',
+		'Durumi - Abuja',
+        'Dutse - Abuja', 
+        'Game village - Abuja',
+        'Garki - Abuja',
+        'Gwagwa - Abuja',
+        'Gwagwalada - Abuja',
+        'Gwarimpa - Abuja', 
+    	'Kaduna road - Kaduna',
+      	'Karmo - Abuja',
+        'Karu - Abuja',
+    	'Kubwa - Abuja', 
+      	'Kuje - Abuja',
+        'Lifecamp - Abuja', 
+    	'Lokogoma - Abuja',
+      	'Lugbe - Abuja',
+		'Maitama - Abuja',
+        'Mararaba, Masaka, Keffi, Lafia - Nasarawa',
+        'Mpape - Abuja', 
+        'Nyanya - Abuja',
+        'Suleja, Mandala -  Niger',     
+        'Wuse - Abuja', 
+      	'Zuba - Abuja',
+
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application Environment

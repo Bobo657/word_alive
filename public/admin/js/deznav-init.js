@@ -35,7 +35,7 @@ function getUrlParams(dParam)
 	dzSettingsOptions = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_4",
 		navheaderBg: "color_4",

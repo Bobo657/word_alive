@@ -23,7 +23,7 @@
                     <button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>
                     Error ! {{ session('error') }}. 
                 </div>
-                @endif -->
+                  @endif -->
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group mb-10">
@@ -37,7 +37,7 @@
                   </div>
                   <div class="col-sm-12">
                     <div class="form-group mb-10">
-                      <input wire:model.prefer="email" class="form-control required email" type="email" placeholder="Enter Email" aria-required="true">
+                      <input wire:model.lazy="email" class="form-control required email" type="email" placeholder="Enter Email" aria-required="true">
                       @error('email') 
                         <span class="text-danger">
                             {{ $message }}
@@ -48,11 +48,11 @@
                   <div class="col-sm-12 col-md-6">
                     <div class="radio">
                         <label class="radio-inline">
-                            <input type="radio" wire:model.prefer="gender" name="gender" id="inlineRadio1" value="male">
+                            <input type="radio" wire:model.lazy="gender" name="gender" id="inlineRadio1" value="male">
                             Male
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" wire:model.prefer="gender" name="gender" id="inlineRadio2" value="female">
+                            <input type="radio" wire:model.lazy="gender" name="gender" id="inlineRadio2" value="female">
                             Female
                         </label>
                     </div>
@@ -64,7 +64,7 @@
                   </div>
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group mb-10">
-                      <input wire:model.prefer="phone" class="form-control" type="tel"  placeholder="Enter Phone" >
+                      <input wire:model.lazy="phone" class="form-control" type="tel"  placeholder="Enter Phone" >
                       @error('phone') 
                         <span class="text-danger">
                             {{ $message }}
@@ -74,7 +74,7 @@
                   </div>
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group mb-10">
-                      <input wire:model.prefer="dob" class="form-control required" type="date" placeholder="Date of birth">
+                      <input wire:model.lazy="dob" class="form-control required" type="date" placeholder="Date of birth">
                         @error('dob') 
                         <span class="text-danger">
                             {{ $message }}
@@ -84,11 +84,11 @@
                   </div>
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group mb-10">
-                        <select class="form-control" wire:model.prefer="marital_status">
+                        <select class="form-control" wire:model.lazy="marital_status">
                             <option value="">Select marital status</option>
-                            <option value="married">Married</option>
-                            <option value="single">Single</option>
-                            <option value="divorced">Divorced</option>
+                            @foreach(config('app.marital_status') as $status)
+                                  <option value="{{ $status}}">{{ ucfirst($status) }}</option>
+                            @endforeach
                         </select>
                         @error('marital_status') 
                             <span class="text-danger">
@@ -97,11 +97,47 @@
                         @enderror
                     </div>
                   </div>
-                  
+                </div>
+                
+                <div class="form-group mb-10">
+                    <input wire:model.lazy="duration" min="1" class="form-control required" type="number" placeholder="How many years or how long in church?">
+                    @error('duration') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="form-group mb-10">
-                  <textarea wire:model.prefer="address"  class="form-control"  placeholder="Enter Address" rows="3" ></textarea>
+                    <label class="form-label">Address- Area </label>
+                    <select class="form-control" wire:model.lazy="area">
+                        <option value="">Select address- area </option>
+                        @foreach(config('app.church_areas') as $area )
+                              <option value="{{ $area}}">{{ $area }}</option>
+                        @endforeach
+                    </select>
+                    @error('area') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                    @enderror
+                </div>
+                <div class="form-group mb-10">
+                  <textarea wire:model.lazy="address"  class="form-control"  placeholder="Enter Address" rows="3" ></textarea>
                   @error('address') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                    @enderror
+                </div>
+                <div class="form-group mb-10">
+                    <label class="form-label">Select classes you have attended</label>
+                    <select class="form-control" multiple wire:model.lazy="classes">
+                        <option value="">Select class</option>
+                        @foreach(config('app.classes') as $class => $name)
+                              <option value="{{ $class}}">{{ $class }} - {{ $name }}</option>
+                        @endforeach
+                    </select>
+                    @error('classes') 
                         <span class="text-danger">
                             {{ $message }}
                         </span>

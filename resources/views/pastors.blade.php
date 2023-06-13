@@ -30,15 +30,7 @@
             <h3 class="line-bottom">Rev. Godwin Abba </h3>
             <h5 class="text-theme-colored">President and Founder</h5>
             <p class="text-justify">Rev. Godwin Abba is the  President and Founder of Word Alive Centre International, one of the leading and fast-growing Churches in Abuja, Nigeria, tasked with restoring,  transforming, and repositioning lives, Families, and Nations for exceptional exploits and impacts on their world. He is the CEO of Infinite Leadership and Management Consult Ltd, a trained Marketer, a certified coach, speaker, and trainer with one of the world’s top teams of leading experts, the John Maxwell Team. He is also a Fellow of the Nigerian Institute of Management Consultants. </p>
-
             <p class="text-justify">As a leader par excellence, he wears many hats: Human Resource Developer, Researcher, Administrator, Fitness Coach/Martial Art Instructor, Management Consultant, Marriage/Relationship Coach, and profound and prolific Author. He is widely traveled, blessing and changing lives across the world. He is happily married to Pastor Mrs. Chinyere Abba and blessed with four Children.</p>
-            <ul class="styled-icons icon-gray text-theme-colored mt-15 mb-15">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-skype"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
           </div>
         </div>
       </div>
@@ -57,24 +49,17 @@
             </div>
             <div class="section-content">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_chinyere.jpg" alt="">
                                 <h4 class="mt-20 pb-0 p-10" style="margin-bottom: 1px;">Pastor Chinyere S. Abba</h4>
                                 <p class="p-10 pt-0"><b>Assistant Senior Pastor.</b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_bola.jpg" alt="">
@@ -83,17 +68,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Associate Pastor </b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_ekezie.jpg" alt="">
@@ -102,17 +80,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Associate Pastor </b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_jude.jpg" alt="">
@@ -121,17 +92,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Associate Pastor </b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_emmanuel.jpg" alt="">
@@ -140,17 +104,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Associate Pastor </b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_oyibo.jpg" alt="">
@@ -159,17 +116,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Associate Pastor </b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_isreal.jpg" alt="">
@@ -178,17 +128,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Associate Pastor </b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
                         <div class="maxwidth500 mb-sm-30 border-2px">
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_mike.jpg" alt="">
@@ -197,36 +140,10 @@
                                 </h4>
                                 <p class="p-10 pt-0"><b>Resident Pastor</b></p>
                             </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="maxwidth500 mb-sm-30 border-2px">
-                            <div class="team-upper-block  text-center">
-                                <img class="img-fullwidth" src="http://placehold.it/416x393" alt="">
-                                <h4 class="mt-20 pb-0 p-10" style="margin-bottom: 1px;">
-                                    Pastor Abraham
-                                </h4>
-                                <p class="p-10 pt-0"><b>Associate Pastor </b></p>
-                            </div>
-                            <div class="team-lower-block bg-theme-colored text-center p-0">
-                                <ul class="styled-icons icon-circled icon-sm icon-dark  icon-theme-colored pt-10 pb-10">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
+                  
                 </div>
             </div>
         </div>
@@ -258,7 +175,7 @@
         </div>
         <div class="section-content">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="/images/pastors/pst_sunny.jpg" alt="">
@@ -266,16 +183,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Dawaki Branch)</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="/images/pastors/pst_orji.jpg" alt="">
@@ -283,16 +195,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Assist Pastor (Dawaki Branch)</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="/images/pastors/pst_elisha.jpg" alt="">
@@ -300,16 +207,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Mararaba Branch)</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="images/pastors/pst_victor.jpg" alt="">
@@ -317,16 +219,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Assist Pastor (Mararaba Branch)</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="/images/pastors/pst_ochola.jpg" alt="">
@@ -334,16 +231,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Mpape Branch)</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="images/pastors/pst_abednego.jpg" alt="">
@@ -351,16 +243,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Kubwa Branch).</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="col-xs-12 col-sm-6 col-md-3 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="maxwidth500 mb-sm-30 border-2px">
                 <div class="team-upper-block text-center">
                   <img class="img-fullwidth" src="/images/pastors/pst_theophilus.jpg" alt="">
@@ -368,32 +255,11 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Ebilo Branch).</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 mt-10 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-              <div class="maxwidth500 mb-sm-30 border-2px">
-                <div class="team-upper-block text-center">
-                  <img class="img-fullwidth" src="/images/pastors/pst_benjamin.jpg" alt="">
-                  <h4 class="mt-20 pb-0 mb-0">Pastor Victor Ojotule Benjamin</h4>
-                </div>
-                <div class="team-lower-block text-center pt-0 p-20">
-                  <p class="pb-10">Assistant Pastor (Mararab Branch).</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

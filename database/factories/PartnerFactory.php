@@ -22,11 +22,15 @@ class PartnerFactory extends Factory
             'last_name' => $this->faker->lastName,
             'email' => $this->faker->unique()->safeEmail,
             'address' => $this->faker->address,
-            'plan' => $this->faker->randomElement(['basic', 'standard', 'premium']),
+            'plan' => $this->faker->randomElement(config('app.plans')),
             'mail' => $this->faker->boolean,
             'sms' => $this->faker->boolean,
             'call' => $this->faker->boolean,
             'phone' => $this->faker->phoneNumber,
+            'dob' => $this->faker->date(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'marital_status' => $this->faker->randomElement(['single', 'married', 'divorced', 'widowed']),
+            'wedding_anniversary' => $this->faker->date()
         ];
     }
 }

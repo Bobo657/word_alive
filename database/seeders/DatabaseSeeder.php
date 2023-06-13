@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         \App\Models\Event::factory(10)->create();
-        \App\Models\Partner::factory(100)->create();
+        \App\Models\Partner::factory(25)->create();
 
         Department::insert([ 
             ['name'=>'Alive Welfare'],
@@ -56,5 +56,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         \App\Models\Donation::factory(10)->create();
+
+        \App\Models\PartnerDonation::factory(205)->create();
     }
 }

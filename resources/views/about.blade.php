@@ -142,12 +142,6 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Mpape Branch)</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -159,12 +153,6 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Kubwa Branch).</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -176,19 +164,13 @@
                 </div>
                 <div class="team-lower-block text-center pt-0 p-20">
                   <p class="pb-10">Senior Pastor (Ebilo Branch).</p>
-                  <ul class="styled-icons icon-sm icon-dark border-top  icon-theme-colored pt-20 pb-0">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row text-center">
-            <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-10" href="/pastors">View More</a>
+            <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-10" href="/our_pastors">View More</a>
         </div>
       </div>
     </section>

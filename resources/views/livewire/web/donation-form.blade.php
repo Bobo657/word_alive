@@ -4,7 +4,6 @@
             <div class="col-md-6 col-md-push-3">
             <h4 class="mt-0 pt-5"> Donation Form </h4>
             <hr>
-            <form id="paypal_donate_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <div class="row">
                     @if (session()->has('message'))
                     <div class="alert alert-success alert-dismissable">
@@ -125,14 +124,9 @@
                     </div>
                     @endif
                     <div class="form-group">
-                        <button type="button" wire:click="savePartner()" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" >Submit</button>
+                        <button type="button" wire:click="makeDonation()" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" >Submit</button>
                     </div>
-
-                   
                 </div>
-            </form>
-            
-            
             </div>
         </div>
     </div>

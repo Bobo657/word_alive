@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Donation;
+use App\Models\PartnerDonation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WebsiteController extends Controller
 {
@@ -47,6 +49,21 @@ class WebsiteController extends Controller
                 return redirect()->route('donate');
             }else{
                 $meta = $response['data']['metadata'];
+               
+                if (Auth::guard('partner')->check()) {
+                    PartnerDonation::create([
+                        'reference' => $response['data']['reference'],
+                        'partner_id' => auth('partner')->user()->id,
+                        'status' => $response['data']['status'],
+                        'channel' => $response['data']['channel'],
+                        'amount' => $meta['amount'],
+                        'date' => $meta['date'],
+                        'authorization' => json_encode($response['data']['authorization']),
+                    ]);
+
+                    session()->flash('message', 'Thank you so much for your generous donation! Your support is greatly appreciated and will make a meaningful impact.');
+                    return redirect()->route('partner.dashboard');
+                }
 
                 Donation::create([
                     'reference' => $response['data']['reference'],

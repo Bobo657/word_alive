@@ -21,7 +21,10 @@ class Member extends Model
         'marital_status',
         'gender',
         'address',
-        'dob'
+        'dob',
+        'classes',
+        'area',
+        'duration'
     ];
 
     public function department(){

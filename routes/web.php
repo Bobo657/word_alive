@@ -6,7 +6,7 @@ use App\Http\Livewire\Admin\{RegisteredMembers, Events, PartnersList, UploadLive
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Web\MemberRegistration;
 use App\Http\Livewire\Admin\MembersDepartmentList;
-use App\Http\Livewire\Web\Partnership;
+use App\Http\Livewire\Web\{Partnership, PartnerLogin, PartnerSettings, PartnerMakePayment, PartnerDashboard, PartnerDonationHistory};
 use Illuminate\Support\Facades\Redirect;
 
 /*
@@ -34,6 +34,7 @@ Route::get('/partner/donation', MemberRegistration::class)->name('partner.donati
 Route::get('/donation/join', Partnership::class)->name('partner.join');
 Route::view('/donate', 'donate')->name('donate');
 Route::get('/verify/payment', [WebsiteController::class, 'verifyPayment']);
+Route::get('/partner/login', PartnerLogin::class)->name('partner.login');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/members/list', RegisteredMembers::class)->name('members.list');
@@ -45,6 +46,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/live/coverage/upload', UploadLiveLink::class)->name('link.upload');
     Route::get('/donations/list', DonationList::class)->name('donations.list');
 });
+
+
+Route::middleware(['notGuard', 'auth:partner'])->group(function () {
+    Route::get('partner/dashboard', PartnerDashboard::class)->name('partner.dashboard');
+});
+
+
+
+
 
 
 

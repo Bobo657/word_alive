@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
+            $table->date('dob');
+            $table->string('marital_status');
+            $table->date('wedding_anniversary')->nullable();
+            $table->string('password');
             $table->string('phone');
             $table->string('address');
             $table->string('plan');

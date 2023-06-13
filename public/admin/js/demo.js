@@ -77,7 +77,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet0 = { /* Default Theme */
 		typography: "poppins",
 			version: "light",
-			layout: "vertical",
+			layout: "horizontal",
 			primary: "color_1",
 			headerBg: "color_4",
 			navheaderBg: "color_4",
@@ -91,7 +91,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet1 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_1",
 		navheaderBg: "color_4",
@@ -120,7 +120,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet3 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_8",
 		headerBg: "color_1",
 		navheaderBg: "color_8",
@@ -134,7 +134,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet4 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_5",
 		headerBg: "color_5",
 		navheaderBg: "color_5",
@@ -148,7 +148,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet5 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_11",
 		headerBg: "color_1",
 		navheaderBg: "color_11",
@@ -161,7 +161,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet6 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_5",
 		headerBg: "color_1",
 		navheaderBg: "color_1",
@@ -174,7 +174,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet7 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_9",
 		headerBg: "color_1",
 		navheaderBg: "color_9",
@@ -187,7 +187,7 @@ function deleteAllCookie(reload = true)
 	var dzThemeSet8 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_10",
 		headerBg: "color_1",
 		navheaderBg: "color_10",
