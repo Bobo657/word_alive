@@ -28,12 +28,12 @@ class PartnerSettings extends Component
             'last_name' => 'required|string|max:255',
             'prefix' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            // 'plan' => 'required|string|max:255',
+            'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:partners,phone,'.auth()->user()->id],
             'email' => 'required|email|max:255|unique:partners,email,'.auth()->user()->id,
-            'phone' => 'required|numeric|unique:partners,phone,'.auth()->user()->id,
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
+            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date']
         ];
     }
 

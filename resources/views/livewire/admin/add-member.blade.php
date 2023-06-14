@@ -82,7 +82,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Phone Number<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input wire:model.lazy="phone" type="tel" class="form-control" placeholder="08067057474">
+                                <input wire:model.lazy="phone" type="tel" class="form-control" placeholder="+234 7035205714">
                             </div>
                             @error('phone') 
                             <span class="text-danger">

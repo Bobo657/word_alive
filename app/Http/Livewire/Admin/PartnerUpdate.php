@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Partner;
 use Livewire\Component;
+use Illuminate\Validation\Rule;
 
 class PartnerUpdate extends Component
 {
@@ -22,20 +23,24 @@ class PartnerUpdate extends Component
     public $sms;
     public $mail;
     public $plan;
+    public $marital_status;
+    public $wedding_anniversary;
 
     public function rules()
     {
         return[
+            'marital_status' => ['required', Rule::in(config('app.marital_status'))],
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'prefix' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'plan' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:partners,email,'.$this->partnerId,
-            'phone' => 'required|regex:/^0[0-9]{10}$/|numeric|unique:partners,phone,'.$this->partnerId,
+            'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:partners,phone,'.$this->partnerId],
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
+            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date'],
         ];
     }
 
@@ -43,6 +48,8 @@ class PartnerUpdate extends Component
     {
         $this->reset();
         $this->partnerId = $partner->id;
+        $this->wedding_anniversary = $partner->wedding_anniversary->format('Y-m-d');
+        $this->marital_status = $partner->marital_status;
         $this->phone = $partner->phone;
         $this->first_name = $partner->first_name;
         $this->last_name = $partner->last_name;
@@ -74,10 +81,11 @@ class PartnerUpdate extends Component
         $partner->prefix = $validatedData['prefix'];
         $partner->address = $validatedData['address'];
         $partner->email = $validatedData['email'];
+        $partner->marital_status = $validatedData['marital_status'];
+        $partner->wedding_anniversary = $validatedData['marital_status'] == 'married' ? $validatedData['wedding_anniversary'] : null;
 
         // Save the updated member to the database
         $partner->save();
-       
 
         // Emit a member to indicate successful member update
         $this->emit('closeModals', '#partnerUpdate');

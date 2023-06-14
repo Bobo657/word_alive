@@ -17,6 +17,7 @@ class MembersDepartmentList extends Component
     ];
 
     public $search;
+    public $area;
     public $departmentID;
     public $departments;
     public $noOfRecords = 20;
@@ -63,7 +64,11 @@ class MembersDepartmentList extends Component
         $members = Member::query()
                     ->has('department')->with('department:id,name')
                     ->when(!empty($this->search), function ($q) {
-                        $q->where('name', 'LIKE', "%{$this->search}%");
+                        $q->where('name', 'LIKE', "%{$this->search}%")
+                            ->orWhere('phone', 'LIKE', "%{$this->search}%");
+                    })
+                    ->when(!empty($this->area), function ($q) {
+                        $q->where('area', 'LIKE', "%{$this->area}%");
                     })
                     ->when(!empty($this->departmentID), function ($q) {
                         return $q->where('department_id', '=', $this->departmentID);

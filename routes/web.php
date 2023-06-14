@@ -47,7 +47,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/donations/list', DonationList::class)->name('donations.list');
 });
 
-
 Route::middleware(['auth:partner'])->group(function () {
     Route::get('partner/dashboard', PartnerDashboard::class)->name('partner.dashboard');
 });

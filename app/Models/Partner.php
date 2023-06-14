@@ -25,6 +25,11 @@ class Partner extends Model implements Authenticatable
         'password'
     ];
 
+    protected $casts = [
+        'dob' => 'date',
+        'wedding_anniversary' => 'date',
+    ];
+
     protected $guard = 'partner';
 
     use HasFactory;

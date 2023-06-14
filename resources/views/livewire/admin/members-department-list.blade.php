@@ -17,19 +17,26 @@
     <div class="container-fluid">
         <div class="row">
             <div class="mb-3 col-md-4">
-                <input type="text" wire:model.debounce="search" class="form-control" placeholder="Search name">
+                <input type="text" wire:model.debounce="search" class="form-control" placeholder="Search name, phone">
             </div>
-            <div class="mb-3 col-md-4">
+            <div class="mb-3 col-md-3">
                 <select class="default-select  form-control wide"  wire:model.debounce="departmentID" >
-                    <option>Select department</option>
+                    <option value="">Select department</option>
                     @foreach($departments as $department)
                     <option value="{{ $department->id }}">{{ $department->name }}</option>
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3 col-md-4">
-                
-            </div>
+            
+            <div class="mb-3 col-md-3">
+                <select class="default-select  form-control wide"  wire:model.debounce="area" >
+                    <option value="">Select address- area </option>
+                    @foreach(config('app.church_areas') as $area )
+                            <option value="{{ $area}}">{{ $area }}</option>
+                    @endforeach
+                </select>
+            </div> 
+       
         </div>
 
         @if (session()->has('message'))
@@ -52,6 +59,7 @@
                                         <th>Name</th>
                                         <th>Phone Number</th>
                                         <th>Department</th>
+                                        <th>Area</th>
                                         <th>Address</th>
                                         <th></th>
                                     </tr>
@@ -61,8 +69,9 @@
                                     <tr>
                                         <td>{{ $member->name }}</td>
                                         <td>{{ $member->phone }}</td>
-                                        <td><span class="text-muted">{{ $member->department->name }}</span>
+                                        <td><span class="text-muted">{{ optional($member->department)->name }}</span>
                                         </td>
+                                        <td>{{ $member->area }}</td>
                                         <td>{{ $member->address }}</td>
                                         <td>
                                             <div class="action-button">

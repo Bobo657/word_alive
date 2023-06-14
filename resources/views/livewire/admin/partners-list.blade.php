@@ -37,7 +37,11 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Phone</th>
+                                        <th>Marital Status</th>
+                                        <th>Dob</th>
+                                        <th>Wedding Anniversary</th>
                                         <th>Plan</th>
+                                        <th>Donated</th>
                                         <th>SMS</th>
                                         <th>Call</th>
                                         <th>Mail</th>
@@ -59,9 +63,14 @@
                                         <td>
                                             <span>{{ $partner->phone }}</span>
                                         </td>
+                                        <td>{{ ucfirst($partner->marital_status) }}</td>
+                                        <td>{{ $partner->dob->format('d M, Y') }}</td>
+                                        <td class="text-center">{{ optional($partner->wedding_anniversary)->format('d M, Y') ?? 'N/A' }}</td>
                                         <td>
                                             <span>{{ ucFirst($partner->plan) }}</span>
                                         </td>
+                                        <td>&#8358;{{ number_format($partner->donations_sum_amount) }}.00</td>
+                                       
                                         <td class="text-center text-{{ $partner->sms ? 'success' : 'danger' }}">
                                             <i class="fas fa-{{ $partner->sms ? 'check' : 'circle' }}"></i>
                                         </td>

@@ -56,6 +56,7 @@ class PartnersList extends Component
     public function render()
     {
         $partners = Partner::query()
+                    ->withSum('donations', 'amount')
                     ->when(!empty($this->search), function ($q) {
                         $q->where('first_name', 'LIKE', "%{$this->search}%")
                             ->orWhere('last_name', 'LIKE', "%{$this->search}%");

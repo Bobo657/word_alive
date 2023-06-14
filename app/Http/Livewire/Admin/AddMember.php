@@ -25,6 +25,7 @@ class AddMember extends Component
         'gender' => 'required|in:male,female',
         'address' => 'required|string|max:255',
         'dob' => 'required|date',
+        'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:members,phone']
     ];
 
     

@@ -40,12 +40,7 @@ class Partnership extends Component
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
-            'wedding_anniversary' => [
-                Rule::requiredIf(function () {
-                    return $this->marital_status == 'married';
-                }),
-                'date'
-            ],
+            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date'],
             'password' => 'required|min:8|confirmed',
         ];
     }

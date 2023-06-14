@@ -12,7 +12,7 @@
                         <div class="col-xl-4">
                             <label class="form-label">Prefix<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <select wire:model.defer="prefix" class="default-select form-control wide mb-3" tabindex="null">
+                                <select wire:model.lazy="prefix" class="default-select form-control wide mb-3" tabindex="null">
                                     <option value="">Select Prefix</option>
                                     <option value="Mr">Mr</option>
                                     <option value="Mrs">Mrs</option>
@@ -25,7 +25,7 @@
 
                         <div class="col-xl-8">
                         <label class="form-label">First Name<span class="text-danger">*</span></label>
-                        <input wire:model.defer="first_name" type="text" class="form-control " placeholder="Uche Joe">
+                        <input wire:model.lazy="first_name" type="text" class="form-control " placeholder="Uche Joe">
                         @error('first_name') 
                         <span class="text-danger">
                             {{ $message }}
@@ -35,7 +35,7 @@
                     </div>
                     
                     <label class="form-label mt-2">Last Name<span class="text-danger">*</span></label>
-                    <input wire:model.defer="last_name" type="text" class="form-control " placeholder="Uche Joe">
+                    <input wire:model.lazy="last_name" type="text" class="form-control " placeholder="Uche Joe">
                     @error('last_name') 
                     <span class="text-danger">
                         {{ $message }}
@@ -45,7 +45,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Email<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input wire:model.defer="email" type="email" class="form-control" placeholder="example@gmail.com">
+                                <input wire:model.lazy="email" type="email" class="form-control" placeholder="example@gmail.com">
                             </div>
                             @error('email') 
                             <span class="text-danger">
@@ -56,7 +56,7 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Phone Number<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input wire:model.defer="phone" type="tel" class="form-control" placeholder="08067057474">
+                                <input wire:model.lazy="phone" type="tel" class="form-control" placeholder="08067057474">
                             </div>
                             @error('phone') 
                             <span class="text-danger">
@@ -64,10 +64,40 @@
                             </span>
                             @enderror
                         </div>
+                       
+                        <div class="col-xl-6">
+                            <label class="form-label mt-3">Marital Status<span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <select wire:model.lazy="marital_status" class="default-select form-control wide mb-3">
+                                    <option value="">Select Status</option>
+                                    @foreach(config('app.marital_status') as $status)
+                                        <option value="{{ $status}}">{{ ucfirst($status) }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @error('marital_status') 
+                            <span class="text-danger">
+                                {{ $message }}
+                            </span>
+                            @enderror
+                        </div>
+                        @if($marital_status == 'married')
+                        <div class="col-xl-6">
+                            <label class="form-label mt-3">Wedding Anniversary<span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input wire:model="wedding_anniversary" class="form-control" type="date">
+                            </div>
+                            @error('wedding_anniversary') 
+                            <span class="text-danger">
+                                {{ $message }}
+                            </span>
+                            @enderror
+                        </div>
+                        @endif
                     </div>
-                    <div class="mt-3 invite">
+                    <div class="mt-2 invite">
                         <label class="form-label">Address<span class="text-danger">*</span></label>
-                        <input wire:model.defer="address" type ="text" class="form-control " placeholder="">
+                        <input wire:model.lazy="address" type ="text" class="form-control " placeholder="">
                         @error('address') 
                             <span class="text-danger">
                                 {{ $message }}
@@ -79,7 +109,7 @@
                         <div class="col-xl-12">
                             <label class="form-label mt-3">Partnership Plan<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <select wire:model.defer="plan" class="default-select form-control wide mb-3">
+                                <select wire:model.lazy="plan" class="default-select form-control wide mb-3">
                                     @foreach(config('app.plans') as $plan)
                                     <option value="{{ $plan }}">{{ $plan }}</option>
                                     @endforeach
@@ -115,7 +145,7 @@
                                 </div>
                             </div>
                             
-                            @error('dob') 
+                            @error('call') 
                             <span class="text-danger">
                                 {{ $message }}
                             </span>

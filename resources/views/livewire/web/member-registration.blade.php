@@ -7,7 +7,7 @@
             <div class="text-center mb-30"><a href="/" class="">
                 <img alt="" style="width: 300px;" src="/images/logo-wide.png"></a></div>
             <div class="bg-lightest border-1px p-25">
-              <h4 class="text-theme-colored text-uppercase m-0">Make an Appointment</h4>
+              <h4 class="text-theme-colored text-uppercase m-0">Become a Member</h4>
               <div class="line-bottom mb-10"></div>
               <p>Be part of our community and experience the love and fellowship.</p>
 
