@@ -20,11 +20,11 @@
                         <div class="col-xl-6">
                             <label class="form-label mt-3">Marital Status<span class="text-danger">*</span></label>
                             <div class="input-group">
-                                <select wire:model.lazy="marital_status" class="default-select form-control wide mb-3" tabindex="null">
+                                <select wire:model.lazy="marital_status" class="form-control mb-3">
                                     <option value="">Select marital status</option>
-                                    <option value="married">Married</option>
-                                    <option value="single">Single</option>
-                                    <option value="divorced">Divorced</option>
+                                    @foreach(config('app.marital_status') as $status)
+                                        <option value="{{ $status}}">{{ ucfirst($status) }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             @error('marital_status') 
@@ -91,7 +91,42 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="mt-3 invite">
+
+                    <div class="form-group mb-10">
+                        <label class="form-label mt-3">How many years or how long in church?<span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <select class="form-control wide mb-3" wire:model.lazy="duration">
+                                <option value="">Select years</option>
+                                <option value="Less than 1yr">Less than 1yr</option>
+                                <option value="1 - 3yrs">1 - 3yrs</option>
+                                <option value="4 - 6yrs">4 - 6yrs</option>
+                                <option value="6yrs and above">6yrs and above</option>  
+                            </select>
+                        </div>
+                        @error('marital_status') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+
+                    <div class="mb-10">
+                        <label class="form-label mt-3">Address- Area <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <select class="form-control  mb-3" wire:model.lazy="area">
+                                @foreach(config('app.church_areas') as $area )
+                                <option value="{{ $area}}">{{ $area }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @error('marital_status') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group ">
                         <label class="form-label">Address<span class="text-danger">*</span></label>
                         <input wire:model.lazy="address" type ="text" class="form-control " placeholder="">
                         @error('address') 
@@ -102,7 +137,6 @@
                     </div>
                 </div>
             </div>
-            
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>

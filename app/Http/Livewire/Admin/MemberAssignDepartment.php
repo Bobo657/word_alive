@@ -17,7 +17,6 @@ class MemberAssignDepartment extends Component
     public $name;
     public $departmentId;
    
-   
     public function assignDepartment(Member $member)
     {
         $this->reset();
@@ -43,7 +42,6 @@ class MemberAssignDepartment extends Component
     public function render()
     {
         $this->departments = Department::all();
-
         return view('livewire.admin.member-assign-department');
     }
 }

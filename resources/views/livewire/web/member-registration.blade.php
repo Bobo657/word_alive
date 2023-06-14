@@ -107,7 +107,7 @@
                 <div class="form-group mb-10">
                   <label class="form-label">How many years or how long in church?</label>
                   <select class="form-control" wire:model.lazy="duration">
-                    <option value="">Select marital status</option>
+                    <option value="">Select years</option>
                     <option value="Less than 1yr">Less than 1yr</option>
                     <option value="1 - 3yrs">1 - 3yrs</option>
                     <option value="4 - 6yrs">4 - 6yrs</option>

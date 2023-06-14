@@ -29,7 +29,7 @@ class Partnership extends Component
     {
         return [
             'marital_status' => ['required', Rule::in(config('app.marital_status'))],
-            'dob' => 'required|date',
+            'dob' => 'required|date_format:Y-m-d|before_or_equal:today',
             'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:partners,phone'],
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
@@ -40,7 +40,7 @@ class Partnership extends Component
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
-            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date'],
+            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date_format:Y-m-d', 'before_or_equal:today'],
             'password' => 'required|min:8|confirmed',
         ];
     }

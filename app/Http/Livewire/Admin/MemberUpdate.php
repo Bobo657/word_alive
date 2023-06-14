@@ -26,7 +26,7 @@ class MemberUpdate extends Component
             'email' => 'required|email|max:255|unique:members,email,'.$this->memberId,
             'marital_status' => 'required|in:single,married,divorced',
             'address' => 'required|string|max:255',
-            'dob' => 'required|date',
+            'dob' => 'required|date_format:Y-m-d|before_or_equal:today',
             'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:members,phone,'.$this->memberId]
         ];
     }

@@ -71,14 +71,14 @@
                 <input type="text" wire:model.debounce="search" class="form-control" placeholder="Search name, phone, email">
             </div>
             <div class="mb-3 col-md-2">
-                <select class="default-select form-control wide mb-3" tabindex="null" wire:model="gender">
+                <select class="form-control mb-3" tabindex="null" wire:model="gender">
                     <option value="">Select gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
             </div>
             <div class="mb-3 col-md-2">
-                <select class="default-select form-control wide mb-3" tabindex="null" wire:model="gender">
+                <select class="form-control mb-3" tabindex="null" wire:model="gender">
                 <option value="">Marital status</option>
                 @foreach(config('app.marital_status') as $status)
                         <option value="{{ $status}}">{{ ucfirst($status) }}</option>
@@ -86,7 +86,7 @@
                 </select>
             </div>
             <div class="mb-3 col-md-2">
-                <select wire:model="month" class="default-select form-control wide mb-3" tabindex="null">
+                <select wire:model="month" class="form-control mb-3" tabindex="null">
                     <option value="">Birthday Month</option>
                     <option value="01">January</option>
                     <option value="02">February</option>
@@ -112,10 +112,9 @@
                         <div class="tbl-caption">
                             <h4 class="heading mb-0">Members List</h4>
                             <div>
-                              
                                 <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#registerMember">
-                                            + Register Member
-                                        </button>
+                                    + Register Member
+                                </button>
                             </div>
                         </div>
                         @if (session()->has('message'))

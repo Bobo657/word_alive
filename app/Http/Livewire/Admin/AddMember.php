@@ -4,11 +4,11 @@ namespace App\Http\Livewire\Admin;
 
 use App\Models\Member;
 use Livewire\Component;
+use Illuminate\Validation\Rule;
 
 class AddMember extends Component
 {
 
-    public $showModal = false;
     public $phone;
     public $name;
     public $email;
@@ -16,18 +16,25 @@ class AddMember extends Component
     public $address;
     public $dob;
     public $marital_status;
+    public $classes;
+    public $area;
+    public $duration;
 
-    protected $rules = [
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255,unique:members,email',
-        'phone' => 'required|unique:members,phone|regex:/^0[0-9]{10}$/',
-        'marital_status' => 'required|in:single,married,divorced',
-        'gender' => 'required|in:male,female',
-        'address' => 'required|string|max:255',
-        'dob' => 'required|date',
-        'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:members,phone']
-    ];
-
+    public function rules() { 
+    
+        return [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:members,email',
+            'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:members,phone'],
+            'marital_status' => ['required',Rule::in(config('app.marital_status'))],
+            'gender' => 'required|in:male,female',
+            'address' => 'required|string|max:255',
+            'dob' => 'required|date_format:Y-m-d|before_or_equal:today',
+            'area' => ['required',Rule::in(config('app.church_areas'))],
+            'duration' => 'required|string',
+            'classes' => 'nullable',
+        ];
+    }
     
     public function saveMember()
     {

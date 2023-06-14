@@ -33,7 +33,7 @@ class PartnerSettings extends Component
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
-            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date']
+            'wedding_anniversary' => [$this->marital_status == 'married' ? 'required' : 'nullable','date_format:Y-m-d','before_or_equal:today']
         ];
     }
 

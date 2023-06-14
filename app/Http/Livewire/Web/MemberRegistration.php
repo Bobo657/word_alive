@@ -8,7 +8,6 @@ use Illuminate\Validation\Rule;
 
 class MemberRegistration extends Component
 {
-    public $showModal = false;
     public $phone;
     public $name;
     public $email;
@@ -29,7 +28,7 @@ class MemberRegistration extends Component
             'marital_status' => ['required',Rule::in(config('app.marital_status'))],
             'gender' => 'required|in:male,female',
             'address' => 'required|string|max:255',
-            'dob' => 'required|date',
+            'dob' => 'required|date_format:Y-m-d|before_or_equal:today',
             'area' => ['required',Rule::in(config('app.church_areas'))],
             'duration' => 'required|string',
             'classes' => 'nullable',
