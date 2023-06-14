@@ -115,7 +115,7 @@
               @auth('partner')
                 <li><a href="{{ route('partner.dashboard') }}">Partner Dashboard</a></li>
               @else
-              <li><a href="#home">Partner<span class="indicator"></span></a>
+              <li><a href="#home">Partners<span class="indicator"></span></a>
                 <ul class="dropdown">
                   <li><a href="{{ route('partner.join') }}">Become a Partner</a></li>
                   <li><a href="{{ route('partner.login') }}">Partner Login</a></li>
