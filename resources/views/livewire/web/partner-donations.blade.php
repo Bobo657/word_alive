@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table table-hover table-responsive-sm">
+            <table class="table table-hover table-striped table-responsive-sm">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -28,7 +28,8 @@
                             <td>{{ $donation->reference }}</td>
                             <td>{{ $donation->authorization['bank'] }}</td>
                             <td>{{ ucfirst($donation->channel) }}</td>
-                            <td><span class="badge badge-primary light">{{ $donation->status }}</span>
+                            <td><span class="text-{{ $donation->status == 'success' ? 'primary' : 'danger' }}">
+                                {{ ucfirst($donation->status) }}</span>
                             </td>
                             <td>{{ $donation->created_at->format('d M, Y')}}</td>
                             <td class="color-primary">&#8358;{{  number_format($donation->amount  )}}</td>
