@@ -28,14 +28,14 @@
                 <div class="card">
                     <div class="card-body p-0">
                         <div class="table-responsive active-projects style-1">
-                        <div class="tbl-caption">
-                            <h4 class="heading mb-0">Events List</h4>
-                            <div>
-                                <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#createEvent">
-                                    + Add event
-                                </button>
+                            <div class="tbl-caption">
+                                <h4 class="heading mb-0">Events List</h4>
+                                <div>
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#createEvent">
+                                        + Add event
+                                    </button>
+                                </div>
                             </div>
-                        </div>
                         
                             <table id="empoloyees-tblwrapper" class="table">
                                 <thead>
@@ -50,7 +50,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($events as $event)
+                                    @forelse($events as $event)
                                     <tr>
                                         <td><span>{{ $event->title }}</span>
                                         </td>
@@ -77,9 +77,20 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    @empty
+                                    <tr>
+                                    <div class="noresult" >
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">No event was found in the database.</p>
+                                        </div>
+                                    </div>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
+                            @if($events->total() >  0)
                             <div class="row">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div>
@@ -91,6 +102,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>

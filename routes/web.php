@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\{RegisteredMembers, Events, PartnersList, UploadLiveLink, DonationList};
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Web\MemberRegistration;
-use App\Http\Livewire\Admin\MembersDepartmentList;
-use App\Http\Livewire\Web\{Partnership, PartnerLogin, PartnerSettings, PartnerMakePayment, PartnerDashboard, PartnerDonationHistory};
+use App\Http\Livewire\Admin\{MembersDepartmentList, PartnerDonations};
+use App\Http\Livewire\Web\{Partnership, PartnerLogin, PartnerDashboard};
 use Illuminate\Support\Facades\Redirect;
 
 /*
@@ -44,8 +44,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/members/departments', MembersDepartmentList::class)->name('members.departments');
     Route::view('/settings', 'settings');
     Route::get('/partners/list', PartnersList::class)->name('partners.list');
+    Route::get('/partners/donation', PartnerDonations::class)->name('partners.donations');
     Route::get('/live/coverage/upload', UploadLiveLink::class)->name('link.upload');
     Route::get('/donations/list', DonationList::class)->name('donations.list');
+
 });
 
 Route::middleware(['auth:partner'])->group(function () {

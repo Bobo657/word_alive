@@ -44,7 +44,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($donations as $donation)
+                                    @forelse($donations as $donation)
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
@@ -70,10 +70,21 @@
                                             <button wire:click.prevent="confirmDelete({{$donation->id}})"  type="button" class="btn btn-danger btn-icon-xxs"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    @empty
+                                    <tr>
+                                    <div class="noresult" >
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">No record was found in the database.</p>
+                                        </div>
+                                    </div>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
 
+                            @if($donations->total() > 0)
                             <div class="row">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div>
@@ -85,6 +96,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                             
                         </div>
                     </div>

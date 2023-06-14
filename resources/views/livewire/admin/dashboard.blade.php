@@ -116,7 +116,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($members as $member)
+                                @forelse($members as $member)
                                 <tr>
                                     <td><span>{{ $member->name }}</span></td>
                                     <td>
@@ -134,7 +134,17 @@
                                         <span>{{ $member->created_at->format('d-m-Y') }}</span>
                                     </td>
                                 </tr>
-                                @endforeach
+                                @empty
+                                    <tr>
+                                    <div class="noresult" >
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">No record was found in the database.</p>
+                                        </div>
+                                    </div>
+                                    </tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>
@@ -145,7 +155,7 @@
         <div class="row">
             <div class="col-xl-4 col-sm-12">
                 <h4 class="heading">
-                    <i class="fas fa-birthday-cake  text-primary me-3"></i> Birthdays for {{ date('M') }}
+                    <i class="fas fa-birthday-cake  text-primary me-3"></i> Birthdays for {{ date('F') }}
                 </h4>
                 <div class="card h-auto">
                     <div class="card-body">
@@ -155,11 +165,10 @@
                                     <th>Name</th>
                                     <th>Gender</th>
                                     <th>Birthday</th>
-                                   
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($birthdays as $birthday)
+                                @forelse($birthdays as $birthday)
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
@@ -176,7 +185,17 @@
                                             <p class="mb-0 font-w500">{{ $member->dob->format('jS F ') }}</p>	
                                         </td>
                                     </tr>
-                                @endforeach
+                                    @empty
+                                    <tr>
+                                    <div class="noresult" >
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">No birthday for the of {{ date('F')}} was found in the database.</p>
+                                        </div>
+                                    </div>
+                                    </tr>
+                                    @endforelse
                             </tbody>
                         </table>
                     </div>

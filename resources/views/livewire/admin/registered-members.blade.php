@@ -149,7 +149,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($members as $member)
+                                    @forelse($members as $member)
                                     <tr>
                                         <td><span>{{ $member->name }}</span></td>
                                         <td>
@@ -183,9 +183,21 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                
+                                    @empty
+                                    <tr>
+                                    <div class="noresult" >
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">No member was found in the database.</p>
+                                        </div>
+                                    </div>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
+                            @if($members->total())
                             <div class="row">
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div>
@@ -196,6 +208,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                            
                         </div>
                     </div>

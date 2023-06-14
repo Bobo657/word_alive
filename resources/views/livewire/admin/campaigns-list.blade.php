@@ -17,7 +17,7 @@
         <div class="card-body">
             <table class="table">
                 <tbody>
-                    @foreach($campaigns as $campaign)
+                    @forelse($campaigns as $campaign)
                     <tr>
                         <td>
                             <p class="mb-0 ms-2">{{ $campaign->name }}</p>	
@@ -33,7 +33,17 @@
                             </div>
                         </td>
                     </tr>
-                    @endforeach
+                    @empty
+                    <tr>
+                        <div class="noresult" >
+                            <div class="text-center py-4">
+                                <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                <h5 class="mt-2">Sorry! No Result Found</h5>
+                                <p class="text-muted mb-0">No campaign was found in the database.</p>
+                            </div>
+                        </div>
+                    </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>

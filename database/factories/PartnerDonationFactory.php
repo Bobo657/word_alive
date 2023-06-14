@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +17,10 @@ class PartnerDonationFactory extends Factory
      */
     public function definition(): array
     {
+        $currentYear = Carbon::now()->year;
+
         return [
+            'created_at' => $this->faker->dateTimeBetween("{$currentYear}-01-01", "{$currentYear}-06-15"),
             'partner_id' => random_int(1, 20),
             'reference' => $this->faker->unique()->randomNumber(),
             'amount' => $this->faker->numberBetween(100, 10000),

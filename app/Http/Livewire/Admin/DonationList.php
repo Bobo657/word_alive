@@ -8,7 +8,6 @@ use Livewire\WithPagination;
 
 class DonationList extends Component
 {
-
     use  WithPagination;
 
     protected $listeners = [

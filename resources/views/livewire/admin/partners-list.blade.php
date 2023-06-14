@@ -50,7 +50,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($partners as $partner)
+                                    @forelse($partners as $partner)
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
@@ -93,18 +93,32 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    @empty
+                                    <tr>
+                                    <div class="noresult" >
+                                        <div class="text-center py-4">
+                                            <i class="ph-magnifying-glass fs-1 text-primary"></i>
+                                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                                            <p class="text-muted mb-0">No partner was found in the database.</p>
+                                        </div>
+                                    </div>
+                                    </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    {{ $partners->links('components.pagination_links') }}
-                                    
-                                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
-                                        Showing {{ $partners->currentpage() }} to {{ $partners->currentpage() * $partners->perpage() }}  of  {{ $partners->total() }} entries
+                            @if( $partners->total() > 0)
+                            <div class="row">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div>
+                                        {{ $partners->links('components.pagination_links') }}
+                                        
+                                        <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                            Showing {{ $partners->currentpage() }} to {{ $partners->currentpage() * $partners->perpage() }}  of  {{ $partners->total() }} entries
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            @endif
                             
                         </div>
                     </div>
