@@ -48,7 +48,7 @@ class PartnerUpdate extends Component
     {
         $this->reset();
         $this->partnerId = $partner->id;
-        $this->wedding_anniversary = $partner->wedding_anniversary->format('Y-m-d');
+        $this->wedding_anniversary = optional($partner->wedding_anniversary)->format('Y-m-d') ?? null;
         $this->marital_status = $partner->marital_status;
         $this->phone = $partner->phone;
         $this->first_name = $partner->first_name;
