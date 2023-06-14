@@ -18,6 +18,8 @@ class RegisteredMembers extends Component
     use  WithPagination;
 
     public $search;
+    public $area;
+    public $marital_status;
     public $stats;
     public $gender;
     public $month;
@@ -104,6 +106,12 @@ class RegisteredMembers extends Component
                     })
                     ->when(!empty($this->gender), function ($q) {
                         return $q->where('gender', '=', $this->gender);
+                    })
+                    ->when(!empty($this->area), function ($q) {
+                        return $q->where('area', '=', $this->area);
+                    })
+                    ->when(!empty($this->marital_status), function ($q) {
+                        return $q->where('marital_status', '=', $this->marital_status);
                     })
                     ->when(!empty($this->month), function ($q) {
                         return $q->whereMonth('dob', '=', $this->month);

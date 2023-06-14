@@ -22,12 +22,12 @@ class CreateEvent extends Component
 
     protected $rules = [
         'photo' => 'nullable|image|max:2048', 
-        'startDate' => 'required|date',
-        'endDate' => 'required|date|after_or_equal:startDate',
+        'startDate' => 'required|date_format:Y-m-d',
+        'endDate' => 'required|date_format:Y-m-d|after_or_equal:startDate',
         'title' => 'required|string|max:255',
         'location' => 'required|string|max:255',
         'time' => 'required',
-        'description' => 'required|string',
+        'description' => 'required|string'
     ];
 
     public function createEvent()

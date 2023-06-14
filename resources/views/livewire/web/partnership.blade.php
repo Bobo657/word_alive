@@ -71,7 +71,7 @@
                   <div class="col-sm-12 col-md-6  mb-20">
                     <div class="form-group mb-0">
                     <label class="form-label">Phone Number</label>
-                    <input wire:model.lazy="phone" class="form-control" type="tel" id="telephone" name="telephone"  placeholder="+234 7035205714" >
+                    <input wire:model="phone" class="form-control" placeholder="+234 7035205714">
                     </div>
                     @error('phone') 
                         <span class="text-danger">
@@ -193,6 +193,13 @@
                     @enderror
                   </div>
                 </div>
+
+                @if (session()->has('message'))
+                <div class="alert alert-success alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>
+                    Success! {{ session('message') }}.
+                </div>
+                @endif
                 
                 <div class="form-group">
                     <button type="button" wire:click="savePartner()" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" >Submit</button>

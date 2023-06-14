@@ -46,6 +46,7 @@ class PartnerSettings extends Component
         $this->email = auth()->user()->email;
         $this->address = auth()->user()->address;
         $this->prefix = auth()->user()->prefix;
+        $this->wedding_anniversary = auth()->user()->wedding_anniversary->format('Y-m-d');
         $this->plan = auth()->user()->plan;
         $this->sms = auth()->user()->sms == 1 ? 1 : '';
         $this->call = auth()->user()->call == 1 ? 1 : '';
@@ -60,8 +61,8 @@ class PartnerSettings extends Component
         $validatedData['mail'] = (int)$validatedData['mail'];
 
         auth()->user()->update($validatedData);
+        $this->reset();
         session()->flash('message', 'Your profile has been successfully updated.');
-        return redirect(request()->header('Referer'));
     }
 
     public function render()

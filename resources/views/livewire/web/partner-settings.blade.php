@@ -103,6 +103,21 @@
                     </span>
                     @enderror
                 </div>
+
+                @if($marital_status == 'married')
+                    <div class="col-xl-6">
+                        <label class="form-label mt-3">Wedding Anniversary<span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input wire:model="wedding_anniversary" class="form-control" type="date">
+                        </div>
+                        @error('wedding_anniversary') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+                @endif
+                
                 <div class="col-xl-12">
                     <label class="form-label mt-3">How would you like us to contact you<span class="text-danger">*</span></label>
                     <div class="mb-3">

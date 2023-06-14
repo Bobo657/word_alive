@@ -78,7 +78,7 @@
                 </select>
             </div>
             <div class="mb-3 col-md-2">
-                <select class="form-control mb-3" tabindex="null" wire:model="gender">
+                <select class="form-control mb-3"  wire:model="marital_status">
                 <option value="">Marital status</option>
                 @foreach(config('app.marital_status') as $status)
                         <option value="{{ $status}}">{{ ucfirst($status) }}</option>
@@ -100,6 +100,14 @@
                     <option value="10">October</option>
                     <option value="11">November</option>
                     <option value="12">December</option>
+                </select>
+            </div>
+            <div class="mb-3 col-md-3">
+                <select class="form-control mb-3"  wire:model="area">
+                <option value="">Select area</option>
+                @foreach(config('app.church_areas') as $area)
+                        <option value="{{ $area}}">{{ ucfirst($area) }}</option>
+                @endforeach
                 </select>
             </div>
         </div>

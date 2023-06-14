@@ -60,7 +60,7 @@
                                         <td>
                                             <span>{{ ucFirst(optional($donation->campaign)->name) }}</span>
                                         </td>
-                                        <td class="text-center">
+                                        <td>
                                             &#8358;{{ number_format($donation->amount) }}
                                         </td>
                                         <td>

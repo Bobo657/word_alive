@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Web;
 
 use Illuminate\Validation\Rule;
 use App\Models\Partner;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Illuminate\Support\Facades\Hash;
 
@@ -50,10 +51,12 @@ class Partnership extends Component
         $validatedData = $this->validate();
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        Partner::create($validatedData);
-
+        $user = Partner::create($validatedData);
+    
         $this->reset();
-        session()->flash('message', 'Your registration was successful.');
+        Auth::guard('partner')->loginUsingId($user->id);
+
+        return redirect()->route('partner.dashboard')->with('message', 'Thank you for registering as a church partner! We appreciate your partnership and look forward to serving together.');
     }
 
     public function render()
