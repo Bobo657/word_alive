@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-sm-12 col-md-6  mb-20">
                         <div class="form-group mb-0">
-                            <input wire:model.lazy="phone" class="form-control" type="tel" placeholder="Enter Phone Number">
+                            <input wire:model.lazy="phone" class="form-control" type="tel" id="telephone" name="telephone"  placeholder="+234 7035205714" >
                         </div>
                         @error('phone') 
                             <span class="text-danger">

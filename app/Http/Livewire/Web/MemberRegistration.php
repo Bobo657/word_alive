@@ -25,13 +25,13 @@ class MemberRegistration extends Component
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:members,email',
-            'phone' => 'required|numeric|unique:members,phone|regex:/^0[0-9]{10}$/',
+            'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:members,phone'],
             'marital_status' => ['required',Rule::in(config('app.marital_status'))],
             'gender' => 'required|in:male,female',
             'address' => 'required|string|max:255',
             'dob' => 'required|date',
             'area' => ['required',Rule::in(config('app.church_areas'))],
-            'duration' => 'required|integer|min:1',
+            'duration' => 'required|string',
             'classes' => 'nullable',
         ];
     }
@@ -44,6 +44,7 @@ class MemberRegistration extends Component
         Member::create($data);
         $this->reset();
         session()->flash('message', 'Your registration was successful.');
+        return redirect(request()->header('Referer'));
     }
 
     public function render()

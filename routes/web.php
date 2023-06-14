@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::view('/contact_us', 'contact');
-Route::view('/our_pastors', 'pastors');
+Route::view('/our_pastors', 'pastors')->name('pastors');
 Route::view('/about_us', 'about');
 Route::view('/events', 'events');
 Route::view('/ministries', 'ministries');

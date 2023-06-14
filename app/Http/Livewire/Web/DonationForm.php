@@ -25,7 +25,7 @@ class DonationForm extends Component
             'campaign_id' => 'required|integer',
             'address' => 'required|string|max:255',
             'email' => 'required|email|max:255|',
-            'phone' => 'required|numeric|regex:/^0[0-9]{10}$/',
+            'phone' => ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/'],
             'amount' => 'required|integer|min:199',
         ];
     }

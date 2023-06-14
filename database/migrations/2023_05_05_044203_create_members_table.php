@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('department_id')->nullable();
             $table->string('marital_status');
             $table->json('classes')->nullable();
-            $table->integer('duration');
+            $table->string('duration');
             $table->string('area');
             $table->timestamps();
         });

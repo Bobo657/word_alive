@@ -19,6 +19,7 @@
                 <div class="row">
                     <div class="col-sm-4 mb-20">
                     <div class="form-group mb-0">
+                    <label class="form-label">Prefix</label>
                         <select id="inputState" wire:model.defer="prefix" class="default-select form-control wide">
                             <option value="">Select Prefix</option>
                             <option value="Mr">Mr</option>
@@ -36,6 +37,7 @@
                   </div>
                   <div class="col-sm-8 mb-20">
                     <div class="form-group mb-0">
+                    <label class="form-label">First Name</label>
                       <input wire:model.lazy="first_name" class="form-control" type="text" placeholder="Enter First Name">
                     </div>
                     @error('first_name') 
@@ -46,6 +48,7 @@
                   </div>
                   <div class="col-sm-12 mb-20">
                     <div class="form-group mb-0">
+                    <label class="form-label">Last Name</label>
                       <input wire:model.lazy="last_name" class="form-control" type="text" placeholder="Enter Surname">
                     </div>
                     @error('last_name') 
@@ -56,6 +59,7 @@
                   </div>
                   <div class="col-sm-12 col-md-6 mb-20">
                     <div class="form-group mb-0">
+                    <label class="form-label">Email Address</label>
                       <input wire:model.lazy="email" class="form-control" type="email" placeholder="Enter Email">
                     </div>
                     @error('email') 
@@ -66,7 +70,8 @@
                   </div>
                   <div class="col-sm-12 col-md-6  mb-20">
                     <div class="form-group mb-0">
-                      <input wire:model.lazy="phone" class="form-control" type="text" placeholder="Enter Phone Number">
+                    <label class="form-label">Phone Number</label>
+                    <input wire:model.lazy="phone" class="form-control" type="tel" id="telephone" name="telephone"  placeholder="+234 7035205714" >
                     </div>
                     @error('phone') 
                         <span class="text-danger">
@@ -88,7 +93,7 @@
                   <div class="col-sm-12 col-md-4 mb-20">
                     <label class="form-label">Marital Status</label>
                     <div class="form-group mb-0">
-                      <select id="inputState" wire:model.defer="marital_status" class="default-select form-control wide">
+                      <select id="inputState" wire:model="marital_status" class="default-select form-control wide">
                         <option value="">Select Status</option>
                         @foreach(config('app.marital_status') as $status)
                               <option value="{{ $status}}">{{ ucfirst($status) }}</option>
@@ -101,6 +106,8 @@
                         </span>
                     @enderror
                   </div>
+
+                  @if($marital_status == 'married')
                   <div class="col-sm-12 col-md-4 mb-20">
                     <label class="form-label">Wedding Anniversary</label>
                     <div class="form-group mb-0">
@@ -112,8 +119,11 @@
                         </span>
                     @enderror
                   </div>
+                  @endif
+
                   <div class="col-sm-12">
                     <div class="form-group">
+                    <label class="form-label">Conatct Address</label>
                     <textarea wire:model.prefer="address"  class="form-control"  placeholder="Enter Address" rows="3" ></textarea>
                     @error('address') 
                         <span class="text-danger">
@@ -161,6 +171,7 @@
 
                   <div class="col-sm-12 col-md-6  mt-10">
                     <div class="form-group mb-0">
+                    <label class="form-label"> Password</label>
                       <input wire:model.lazy="password" class="form-control" type="password" placeholder="Enter password">
                     </div>
                     @error('password') 
@@ -172,6 +183,7 @@
 
                   <div class="col-sm-12 col-md-6  mt-10">
                     <div class="form-group mb-0">
+                    <label class="form-label">Confirm Password </label>
                       <input wire:model.lazy="password_confirmation" class="form-control" type="password" placeholder="Enter confirm password">
                     </div>
                     @error('password_confirmation') 

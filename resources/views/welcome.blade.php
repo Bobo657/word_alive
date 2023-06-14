@@ -372,7 +372,7 @@
             <div class="sm-height-auto bg-theme-colored-darker3">
                 <div class="p-30">
                 <h3 class="text-uppercase text-white mt-0">Give</h3>
-                <a href="#" class="btn btn-border btn-circled btn-transparent btn-xs mt-5">Give</a>
+                <a href="{{ route('donate') }}" class="btn btn-border btn-circled btn-transparent btn-xs mt-5">Give</a>
                 </div>
                 <i class="flaticon-charity-make-an-online-donation bg-icon"></i>
             </div>
@@ -400,7 +400,7 @@
               <h3 class="text-uppercase line-bottom mt-0">
                 Welcome To <span class="text-theme-colored"> {{ config('app.name')}}</span>
               </h3>
-              <p class="lead">Word Alive Centre International, the Church Arm of Word Alive Revival Ministries International is a vision of birthed by the Senior Pastor Rev. Godwin I. Abba by inspiration from the Spirit if God! </p>
+              <p class="lead">Word Alive Centre International, the Church Arm of Word Alive Revival Ministries International is a vision of birthed by the Senior Pastor Rev. Godwin I. Abba by inspiration from the Spirit of God! </p>
 
               <p class="mb-15"><b>Motto:</b> Healing the broken world by the Spoken Word.</p>
               <div class="widget">
@@ -642,7 +642,7 @@
         </div>
 
         <div class="row text-center">
-            <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-10" href="/pastors">View More</a>
+            <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-10" href="{{ route('pastors') }}">View More</a>
         </div>
       </div>
     </div>
