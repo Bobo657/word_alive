@@ -133,11 +133,12 @@
                             </button>
                         </div>
                         @endif
-                            <table id="empoloyees-tblwrapper" class="table">
+                            <table class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
                                         <th>Gender</th>
+                                        <th>Marital Status</th>
                                         <th>Phone Number</th>
                                         <th>Email</th>
                                         <th>Dob</th>
@@ -154,6 +155,7 @@
                                         <td>
                                             <span>{{ ucFirst($member->gender) }}</span>
                                         </td>
+                                        <td>{{ ucfirst($member->marital_status) }}</td>
                                         <td><span>{{ $member->phone }}</span></td>
                                         <td><span class="text-primary">{{ $member->email }}</span></td>
                                         <td>

@@ -90,7 +90,7 @@
                 <div class="col-xl-6">
                     <label class="form-label mt-3">Marital Status<span class="text-danger">*</span></label>
                     <div class="input-group">
-                        <select wire:model.defer="marital_status" class="default-select form-control wide mb-3">
+                        <select wire:model="marital_status" class="default-select form-control wide mb-3">
                             <option value="">Select Status</option>
                             @foreach(config('app.marital_status') as $status)
                                 <option value="{{ $status}}">{{ ucfirst($status) }}</option>

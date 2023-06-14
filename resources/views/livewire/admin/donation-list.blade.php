@@ -32,7 +32,7 @@
                                 <h4 class="heading mb-0">Donations List</h4>
                             </div>
                             
-                            <table id="empoloyees-tblwrapper" class="table">
+                            <table class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th>Name</th>

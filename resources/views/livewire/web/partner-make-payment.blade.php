@@ -27,7 +27,7 @@
 
             <div class="mb-3 col-md-6">
                 <label class="form-label">Amount</label>
-                <input type="text" name="amount"  wire:model.lazy="amount" class="form-control" placeholder="6,000">
+                <input type="number" min="200" name="amount"  wire:model.lazy="amount" class="form-control" placeholder="6000">
                 @error('amount') 
                     <span class="text-danger">
                         {{ $message }}

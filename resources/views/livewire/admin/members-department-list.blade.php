@@ -58,6 +58,7 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Phone Number</th>
+                                        <th>Marital Status</th>
                                         <th>Department</th>
                                         <th>Area</th>
                                         <th>Address</th>
@@ -69,6 +70,7 @@
                                     <tr>
                                         <td>{{ $member->name }}</td>
                                         <td>{{ $member->phone }}</td>
+                                        <td>{{ $member->marital_status }}</td>
                                         <td><span class="text-muted">{{ optional($member->department)->name }}</span>
                                         </td>
                                         <td>{{ $member->area }}</td>
