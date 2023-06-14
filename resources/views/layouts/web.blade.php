@@ -112,6 +112,16 @@
               <li><a href="/ministries">Ministries</a></li>
               <li><a href="/our_pastors">Our Pastors</a></li>
               <li><a href="/events">Events</a></li>
+              @auth('partner')
+                <li><a href="{{ route('partner.dashboard') }}">Partner Dashboard</a></li>
+              @else
+              <li><a href="#home">Partner<span class="indicator"></span></a>
+                <ul class="dropdown">
+                  <li><a href="{{ route('partner.join') }}">Become a Partner</a></li>
+                  <li><a href="{{ route('partner.login') }}">Partner Login</a></li>
+                </ul>
+              </li>
+              @endauth
               <li><a href="/contact_us">Contact Us</a></li>
             </ul>
           </nav>

@@ -2,7 +2,7 @@
     <div class="card-body">
     <div class="card-header flex-wrap d-flex justify-content-between  border-0">
             <div>
-                <h4 class="card-title">Donataion History</h4>
+                <h4 class="card-title">Donation History</h4>
                 @if($last_donation)
                 <p class="m-0 subtitle">Your last  donation was on  <code>{{ $last_donation->created_at->format('d  M, Y')}}</code></p>
                 @endif

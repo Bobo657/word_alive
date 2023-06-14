@@ -31,10 +31,11 @@ Route::view('/events', 'events');
 Route::view('/ministries', 'ministries');
 Route::get('/member/register', MemberRegistration::class)->name('member.register');
 Route::get('/partner/donation', MemberRegistration::class)->name('partner.donation');
-Route::get('/donation/join', Partnership::class)->name('partner.join');
 Route::view('/donate', 'donate')->name('donate');
 Route::get('/verify/payment', [WebsiteController::class, 'verifyPayment']);
-Route::get('/partner/login', PartnerLogin::class)->name('partner.login');
+
+Route::get('/partner/login', PartnerLogin::class)->name('partner.login')->middleware(['notGuard']);
+Route::get('/donation/join', Partnership::class)->name('partner.join')->middleware('notGuard');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/members/list', RegisteredMembers::class)->name('members.list');

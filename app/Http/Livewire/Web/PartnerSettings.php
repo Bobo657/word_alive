@@ -62,7 +62,8 @@ class PartnerSettings extends Component
 
         auth()->user()->update($validatedData);
         $this->reset();
-        session()->flash('message', 'Your profile has been successfully updated.');
+       
+        return redirect()->route('partner.dashboard')->with('message', 'Your profile has been successfully updated.');
     }
 
     public function render()
