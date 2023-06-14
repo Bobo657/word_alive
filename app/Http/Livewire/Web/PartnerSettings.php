@@ -46,7 +46,7 @@ class PartnerSettings extends Component
         $this->email = auth()->user()->email;
         $this->address = auth()->user()->address;
         $this->prefix = auth()->user()->prefix;
-        $this->wedding_anniversary = auth()->user()->wedding_anniversary->format('Y-m-d');
+        $this->wedding_anniversary = optional(auth()->user()->wedding_anniversary)->format('Y-m-d') ?? null;
         $this->plan = auth()->user()->plan;
         $this->sms = auth()->user()->sms == 1 ? 1 : '';
         $this->call = auth()->user()->call == 1 ? 1 : '';
