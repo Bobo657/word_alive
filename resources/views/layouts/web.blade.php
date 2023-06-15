@@ -156,8 +156,22 @@
     <div class="footer-bottom bg-black-333">
       <div class="container pt-20 pb-20">
         <div class="row">
-          <div class="col-md-12 text-center text-white">
-            <p class="font-11 text-black-777 m-0">Copyright &copy;{{ date('Y')}} {{ config('app.name')}}. All Rights Reserved</p>
+          <div class="col-md-6 text-white" style="color: white;">
+            <p class="font-11 m-0">Copyright &copy;{{ date('Y')}} {{ config('app.name')}}. All Rights Reserved</p>
+          </div>
+          <div class="col-md-6 text-right text-white">
+            <div class="widget no-border m-0">
+              <ul class="list-inline sm-text-center mt-5 font-12" >
+                <li>
+                  <a href="{{ route('terms_conditions') }}" style="color: white;">Terms and Conditions</a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="{{ route('privacy_policy') }}" style="color: white;">Privacy Policy</a>
+                </li>
+               
+              </ul>
+            </div>
           </div>
         </div>
       </div>

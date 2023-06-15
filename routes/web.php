@@ -29,6 +29,8 @@ Route::view('/our_pastors', 'pastors')->name('pastors');
 Route::view('/about_us', 'about');
 Route::view('/events', 'events');
 Route::view('/ministries', 'ministries');
+Route::view('/privacy_policy', 'privacy_policy')->name('privacy_policy');
+Route::view('/terms_conditions', 'terms_conditions')->name('terms_conditions');
 Route::get('/member/register', MemberRegistration::class)->name('member.register');
 Route::get('/partner/donation', MemberRegistration::class)->name('partner.donation');
 Route::view('/donate', 'donate')->name('donate');
@@ -47,7 +49,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/partners/donation', PartnerDonations::class)->name('partners.donations');
     Route::get('/live/coverage/upload', UploadLiveLink::class)->name('link.upload');
     Route::get('/donations/list', DonationList::class)->name('donations.list');
-
 });
 
 Route::middleware(['auth:partner'])->group(function () {
