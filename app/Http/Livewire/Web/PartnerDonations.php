@@ -12,7 +12,7 @@ class PartnerDonations extends Component
 
     public function mount()
     {
-        $this->donations = Auth::user()->donations->sortByDesc('created_at');
+        $this->donations = optional(Auth::guard('partner')->user()->donations)->sortByDesc('created_at');
         $this->last_donation = optional($this->donations)->last();
     }
 

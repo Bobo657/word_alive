@@ -38,10 +38,12 @@ class MemberRegistration extends Component
     public function saveMember()
     {
         $data = $this->validate();
+       
         $data['classes'] = json_encode($data['classes']);
 
         Member::create($data);
         $this->reset();
+        
         session()->flash('message', 'Your registration was successful.');
         return redirect(request()->header('Referer'));
     }

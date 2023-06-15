@@ -28,8 +28,8 @@ class PartnerSettings extends Component
             'last_name' => 'required|string|max:255',
             'prefix' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:partners,phone,'.auth()->user()->id],
-            'email' => 'required|email|max:255|unique:partners,email,'.auth()->user()->id,
+            'phone' =>  ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:partners,phone,'.auth('partner')->user()->id],
+            'email' => 'required|email|max:255|unique:partners,email,'.auth('partner')->user()->id,
             'sms' => 'nullable|boolean|required_without_all:call,mail',
             'call' => 'nullable|boolean|required_without_all:sms,mail',
             'mail' => 'nullable|boolean|required_without_all:sms,call',
@@ -39,18 +39,18 @@ class PartnerSettings extends Component
 
     public function mount()
     {
-        $this->phone = auth()->user()->phone;
-        $this->marital_status = auth()->user()->marital_status;
-        $this->first_name = auth()->user()->first_name;
-        $this->last_name = auth()->user()->last_name;
-        $this->email = auth()->user()->email;
-        $this->address = auth()->user()->address;
-        $this->prefix = auth()->user()->prefix;
-        $this->wedding_anniversary = optional(auth()->user()->wedding_anniversary)->format('Y-m-d') ?? null;
-        $this->plan = auth()->user()->plan;
-        $this->sms = auth()->user()->sms == 1 ? 1 : '';
-        $this->call = auth()->user()->call == 1 ? 1 : '';
-        $this->mail = auth()->user()->mail == 1 ? 1 : '';
+        $this->phone = auth('partner')->user()->phone;
+        $this->marital_status = auth('partner')->user()->marital_status;
+        $this->first_name = auth('partner')->user()->first_name;
+        $this->last_name = auth('partner')->user()->last_name;
+        $this->email = auth('partner')->user()->email;
+        $this->address = auth('partner')->user()->address;
+        $this->prefix = auth('partner')->user()->prefix;
+        $this->wedding_anniversary = optional(auth('partner')->user()->wedding_anniversary)->format('Y-m-d') ?? null;
+        $this->plan = auth('partner')->user()->plan;
+        $this->sms = auth('partner')->user()->sms == 1 ? 1 : '';
+        $this->call = auth('partner')->user()->call == 1 ? 1 : '';
+        $this->mail = auth('partner')->user()->mail == 1 ? 1 : '';
     }
 
     public function updateProfile()
@@ -60,7 +60,7 @@ class PartnerSettings extends Component
         $validatedData['call'] = (int)$validatedData['call'];
         $validatedData['mail'] = (int)$validatedData['mail'];
 
-        auth()->user()->update($validatedData);
+        auth('partner')->user()->update($validatedData);
         $this->reset();
        
         return redirect()->route('partner.dashboard')->with('message', 'Your profile has been successfully updated.');

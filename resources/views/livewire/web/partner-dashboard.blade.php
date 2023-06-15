@@ -24,7 +24,7 @@
                                             <img src="images/profile/profile.png" width="100" class="img-fluid rounded-circle" alt="">
                                         </div> -->
                                         <h3 class="mt-3 mb-1 text-white">{{ auth()->user()->name }}</h3>
-                                        <p class="text-white mb-0">Senior Manager</p>
+                                        <p class="text-white mb-0">Profile last updated on {{ auth()->user()->updated_at->format('d F, Y') }} </p>
                                     </div>
                                     
                                     <div class="profile-personal-info p-3">

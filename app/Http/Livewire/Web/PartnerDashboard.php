@@ -21,7 +21,7 @@ class PartnerDashboard extends Component
     {
         $this->validate();
 
-        $user = Auth::user();
+        $user = Auth::guard('partner')->user();
 
         if (!password_verify($this->currentPassword, $user->password)) {
             $this->addError('currentPassword', 'The current password is incorrect.');

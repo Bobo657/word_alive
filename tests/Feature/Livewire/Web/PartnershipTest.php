@@ -3,11 +3,12 @@
 namespace Tests\Feature\Livewire\Web;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use App\Http\Livewire\Web\Partnership;
 use App\Models\Partner;
 use Livewire\Livewire;
+use Illuminate\Support\Facades\Hash;
 
 class PartnershipTest extends TestCase
 {
@@ -17,26 +18,37 @@ class PartnershipTest extends TestCase
     public function can_create_partner()
     {
         Livewire::test(Partnership::class)
+            ->set('phone', '1234567890')
             ->set('first_name', 'John')
             ->set('last_name', 'Doe')
-            ->set('prefix', 'Mr')
-            ->set('address', '123 Main St')
+            ->set('prefix', 'Mr.')
+            ->set('email', 'john@example.com')
+            ->set('address', '123 Street')
             ->set('plan', 'Basic')
-            ->set('email', 'john.doe@example.com')
-            ->set('phone', '07035205714')
+            ->set('marital_status', 'single')
+            ->set('dob', '1990-01-01')
             ->set('sms', true)
-            ->call('savePartner');
+            ->set('password', 'password')
+            ->set('password_confirmation', 'password')
+            ->call('savePartner')
+            ->assertRedirect(route('partner.dashboard'));
+
+        $this->assertTrue(Auth::guard('partner')->check());
 
         $this->assertDatabaseHas('partners', [
+            'phone' => '1234567890',
             'first_name' => 'John',
             'last_name' => 'Doe',
-            'prefix' => 'Mr',
-            'address' => '123 Main St',
+            'prefix' => 'Mr.',
+            'email' => 'john@example.com',
+            'address' => '123 Street',
             'plan' => 'Basic',
-            'email' => 'john.doe@example.com',
-            'phone' => '07035205714',
-            'sms' => true,
+            'marital_status' => 'single',
+            'sms' => 1,
         ]);
+
+        $partner = Partner::where('email', 'john@example.com')->first();
+        $this->assertTrue(Hash::check('password', $partner->password));
     }
 
     /** @test */
@@ -88,10 +100,10 @@ class PartnershipTest extends TestCase
     /** @test */
     public function unique_phone_is_validated()
     {
-        Partner::factory()->create(['phone' => '07035205714']);
+        Partner::factory()->create(['phone' => '+234 7035205714']);
 
         Livewire::test(Partnership::class)
-            ->set('phone', '07035205714')
+            ->set('phone', '+234 7035205714')
             ->call('savePartner')
             ->assertHasErrors(['phone' => 'unique']);
 

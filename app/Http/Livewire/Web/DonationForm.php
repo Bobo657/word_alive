@@ -26,7 +26,7 @@ class DonationForm extends Component
             'address' => 'required|string|max:255',
             'email' => 'required|email|max:255|',
             'phone' => ['required', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/'],
-            'amount' => 'required|integer|min:199',
+            'amount' => 'required|integer|min:200',
         ];
     }
 

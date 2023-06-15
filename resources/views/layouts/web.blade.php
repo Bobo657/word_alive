@@ -134,7 +134,6 @@
   <div class="main-content">
     <!-- Section: inner-header -->
     @yield('content')
-    
   </div>
   <!-- end main-content -->
 

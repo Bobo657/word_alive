@@ -15,27 +15,32 @@ class MemberRegistrationTest extends TestCase
     /** @test */
     public function can_register_member()
     {
+        $this->withoutExceptionHandling();
+
         Livewire::test(MemberRegistration::class)
             ->set('name', 'John Doe')
-            ->set('email', 'john.doe@example.com')
-            ->set('phone', '07035205714')
+            ->set('email', 'johndoe@example.com')
+            ->set('phone', '+234 7035205714')
             ->set('marital_status', 'single')
             ->set('gender', 'male')
-            ->set('address', '123 Main St')
+            ->set('address', '123 Street')
             ->set('dob', '1990-01-01')
+            ->set('area', 'Bwari - Abuja')
+            ->set('duration', '2 years')
             ->call('saveMember');
-           
+
+        //$this->assertTrue(Member::where('email', 'johndoe@example.com')->exists());
 
         $this->assertDatabaseHas('members', [
             'name' => 'John Doe',
-            'email' => 'john.doe@example.com',
-            'phone' => '07035205714',
+            'email' => 'johndoe@example.com',
+            'phone' => '+234 7035205714',
             'marital_status' => 'single',
             'gender' => 'male',
-            'address' => '123 Main St',
+            'address' => '123 Street',
         ]);
 
-        $this->assertNull(session('message'));
+    
     }
 
     /** @test */
@@ -61,11 +66,13 @@ class MemberRegistrationTest extends TestCase
         Member::create([
             'name' => 'Existing Member',
             'email' => 'existing@example.com',
-            'phone' => '07035205714',
+            'phone' => '+234 7035205714',
             'marital_status' => 'single',
             'gender' => 'male',
             'address' => '123 Main St',
             'dob' => '1990-01-01',
+            'area' => 'Bwari - Abuja',
+            'duration' => '2 years'
         ]);
 
         Livewire::test(MemberRegistration::class)
@@ -81,15 +88,17 @@ class MemberRegistrationTest extends TestCase
         Member::create([
             'name' => 'Existing Member',
             'email' => 'existing@example.com',
-            'phone' => '07035205714',
+            'phone' => '+234 7035205714',
             'marital_status' => 'single',
             'gender' => 'male',
             'address' => '123 Main St',
             'dob' => '1990-01-01',
+            'area' => 'Bwari - Abuja',
+            'duration' => '2 years'
         ]);
 
         Livewire::test(MemberRegistration::class)
-            ->set('phone', '07035205714')
+            ->set('phone', '+234 7035205714')
             ->call('saveMember')
             ->assertHasErrors(['phone' => 'unique']);
     }

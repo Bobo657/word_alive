@@ -62,8 +62,6 @@ class PartnerUpdate extends Component
         $this->mail = $partner->mail == 1 ? 1 : '';
         
         $this->emit('showModal', 'partnerUpdate');
-
-        
     }
 
     public function partnerUpdate()

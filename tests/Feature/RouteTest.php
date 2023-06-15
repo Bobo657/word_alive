@@ -48,6 +48,7 @@ class RouteTest extends TestCase
             '/partners/list',
             '/live/coverage/upload',
             '/donations/list',
+            '/partners/donation'
         ];
 
         $user = User::factory()->create(); // Create a user for authentication
@@ -74,6 +75,7 @@ class RouteTest extends TestCase
             '/partners/list',
             '/live/coverage/upload',
             '/donations/list',
+            '/partners/donation'
         ];
 
         foreach ($routes as $route) {
