@@ -40,7 +40,8 @@ return [
 
     'classes' => [ 
         'AMMC' => 'Alive membership and maturity class',
-        'ALMA' => 'Alive Leadership and Leadership Academy'
+        'ALMA' => 'Alive Leadership and Leadership Academy',
+        'None' => 'None'
     ],
 
     'church_areas' =>  [
@@ -71,6 +72,7 @@ return [
         'Suleja, Mandala -  Niger',     
         'Wuse - Abuja', 
       	'Zuba - Abuja',
+        'Others',
 
     ],
     /*
