@@ -724,10 +724,10 @@
             <h3 class="text-white text-uppercase font-30 font-weight-600 mt-0 mb-20">Worship with us online</h3>
             <p class="text-white lead p-10 text-left">Experience the Power of Virtual Worship: Livestreamed Services and YouTube Accessibility. </p>
             <ul class="styled-icons icon-dark mt-20">
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".1s" data-wow-offset="10"><a href="https://web.facebook.com/REVERENDGodwinAbba?__cft__[0]=AZWYPL0Hg9mq6GAegHD5zFTI3-vTVHmqVb0P_6RD_lE8CTdFCFjDSazoiJL77zasgpudlfMgKbNlmJ_M6zdDHtGRHt2gzp7Vwxlw_eZf4Gxm6u5rz3iAu-AqkxyKb8DKLZjOVQsNf1mz2NTnT3O7bO9t&__tn__=-UC%2CP-R" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s" data-wow-offset="10"><a href="https://twitter.com/waciabuja?s=20" data-bg-color="#02B0E8" ><i class="fa fa-twitter"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s" data-wow-offset="10" ><a href="https://www.instagram.com/RevGodwinAbba/" data-bg-color="#A11312"><i class="fa fa-instagram"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".5s" data-wow-offset="10" ><a href="https://m.youtube.com/@revgodwinabba" data-bg-color="#C22E2A" ><i class="fa fa-youtube"></i></a></li>
+              <li class="wow fadeInLeft"  data-wow-duration="1.5s" data-wow-delay=".1s" data-wow-offset="10"><a href="https://web.facebook.com/REVERENDGodwinAbba?__cft__[0]=AZWYPL0Hg9mq6GAegHD5zFTI3-vTVHmqVb0P_6RD_lE8CTdFCFjDSazoiJL77zasgpudlfMgKbNlmJ_M6zdDHtGRHt2gzp7Vwxlw_eZf4Gxm6u5rz3iAu-AqkxyKb8DKLZjOVQsNf1mz2NTnT3O7bO9t&__tn__=-UC%2CP-R" data-bg-color="#3B5998"><i style="color: #fff;" class="fa fa-facebook"></i></a></li>
+              <li class="wow fadeInLeft"  data-wow-duration="1.5s" data-wow-delay=".2s" data-wow-offset="10"><a href="https://twitter.com/waciabuja?s=20" data-bg-color="#02B0E8" ><i style="color: #fff;" class="fa fa-twitter"></i></a></li>
+              <li class="wow fadeInLeft"  data-wow-duration="1.5s" data-wow-delay=".4s" data-wow-offset="10" ><a href="https://www.instagram.com/RevGodwinAbba/" data-bg-color="#A11312"><i style="color: #fff;" class="fa fa-instagram"></i></a></li>
+              <li class="wow fadeInLeft"  data-wow-duration="1.5s" data-wow-delay=".5s" data-wow-offset="10" ><a href="https://m.youtube.com/@revgodwinabba" data-bg-color="#C22E2A" ><i style="color: #fff;" class="fa fa-youtube"></i></a></li>
             </ul>
           </div>
           <div class="col-md-6">
