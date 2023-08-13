@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Web;
 
+use App\Models\Department;
 use Livewire\Component;
 use App\Models\Member;
 use Illuminate\Validation\Rule;
@@ -18,6 +19,8 @@ class MemberRegistration extends Component
     public $classes;
     public $area;
     public $duration;
+    public $departments;
+    public $department_id;
 
     public function rules() { 
     
@@ -32,7 +35,13 @@ class MemberRegistration extends Component
             'area' => ['required',Rule::in(config('app.church_areas'))],
             'duration' => 'required|string',
             'classes' => 'nullable',
+            'department_id' => 'nullable|integer'
         ];
+    }
+
+    public function mount()
+    {
+        $this->departments = Department::all();
     }
 
     public function saveMember()
@@ -41,7 +50,8 @@ class MemberRegistration extends Component
        
         $data['classes'] = json_encode($data['classes']);
 
-        Member::create($data);
+        $member = Member::create($data);
+
         $this->reset();
         
         session()->flash('message', 'Your registration was successful.');

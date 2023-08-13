@@ -18,15 +18,10 @@
                 </div>
                 @endif
 
-                <!-- @if (session()->has('message'))
-                <div class="alert alert-danger alert-dismissable">
-                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>
-                    Error ! {{ session('error') }}. 
-                </div>
-                  @endif -->
+               
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="form-group mb-10 mt-20">
+                    <div class="form-group mb-10 mt-10">
                     <label class="form-label">Full name</label>
                       <input name="form_name" wire:model.defer="name" class="form-control" type="text" required="" placeholder="Enter Name" aria-required="true">
                       @error('name') 
@@ -151,6 +146,21 @@
                         @endforeach
                     </select>
                     @error('classes') 
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="form-group mb-10">
+                    <label class="form-label">Please choose the department you wish to join.</label>
+                    <select class="form-control"  wire:model.lazy="department_id">
+                        <option value="">Select Department</option>
+                        @foreach($departments as $department)
+                              <option value="{{ $department->id}}">{{ $department->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('department_id') 
                         <span class="text-danger">
                             {{ $message }}
                         </span>

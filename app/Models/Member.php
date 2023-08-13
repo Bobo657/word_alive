@@ -24,7 +24,8 @@ class Member extends Model
         'dob',
         'classes',
         'area',
-        'duration'
+        'duration',
+        'department_id'
     ];
 
     public function department(){

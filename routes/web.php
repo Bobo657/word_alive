@@ -24,6 +24,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//auth()->loginUsingId(1);
+
 Route::view('/contact_us', 'contact');
 Route::view('/our_pastors', 'pastors')->name('pastors');
 Route::view('/about_us', 'about');

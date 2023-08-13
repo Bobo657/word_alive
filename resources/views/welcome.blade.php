@@ -225,7 +225,7 @@
                 data-splitin="none" 
                 data-splitout="none" 
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:600;">Building bridges of faith
+                style="z-index: 7; white-space: nowrap; font-weight:600;">Building faith
             </div>
 
             <!-- LAYER NR. 3 -->
@@ -411,10 +411,16 @@
                       <div class="value pull-right"> 7.00 am - 9.00 am </div>
                     </li>
                     <li class="clearfix"> <span> Sunday Second Service :</span>
-                      <div class="value pull-right"> 9.00 am -11.00 am </div>
+                      <div class="value pull-right"> 9.00 am - 11.00 am </div>
+                    </li>
+                    <li class="clearfix"> <span> 1st Monday of the month break<br> through and deliverance service </span>
+                      <div class="value pull-right"> 5.30 pm - 7.30 pm </div>
                     </li>
                     <li class="clearfix"> <span> Wednesday Midweek Service </span>
-                      <div class="value pull-right"> 5.30 pm -7.30 pm </div>
+                      <div class="value pull-right"> 5.30 pm - 7.30 pm </div>
+                    </li>
+                    <li class="clearfix"> <span> Saturday House fellowships </span>
+                      <div class="value pull-right">6:00pm </div>
                     </li>
                   </ul>
                 </div>
@@ -424,8 +430,8 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="widget">
                 <div class="owl-carousel-1col" data-dots="true">
-                  <div class="item"><img src="/images/mission.jpg" alt=""></div>
-                  <div class="item"><img src="/images/mission1.jpg" alt=""></div>
+                  <div class="item"><img src="/images/mission2.jpg" alt=""></div>
+                  <div class="item"><img src="/images/mission3.jpg" alt=""></div>
                 </div>
               </div>
               <div class="row">
@@ -444,10 +450,6 @@
                         <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Alive Steppers</li>
                         <li class="mb-10"><i class="fa fa-angle-double-right text-theme-colored font-15"></i>&emsp;Alive Teenagers</li>
                     </ul>
-                  </div>
-
-                  <div class="text-center">
-                  <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-10" href="/ministries#units">View More</a> 
                   </div>
               </div>
             </div>
@@ -471,6 +473,10 @@
                     <p class="text-gray">To reach out to the Spirit Man, unto the transformation of his soul while building him (mankind) into his divinely ordained destiny for maximum fulfillment.</p>
                     </div>
                 </div>
+
+                <div class="text-center">
+                  <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-10" href="/ministries#units">View More</a> 
+                  </div>
             </div>
         </div>
         </div>
@@ -575,7 +581,7 @@
             <h5 class="text-theme-colored">President and Founder</h5>
             <p class="text-justify">Rev. Godwin Abba is the President and Founder of Word Alive Centre International, one of the leading and fast-growing Churches in Abuja, Nigeria, tasked with restoring, transforming, and repositioning lives, Families, and Nations for exceptional exploits and impacts on their world. He is the CEO of Infinite Leadership and Management Consult Ltd, a trained Marketer, a certified coach, speaker, and trainer with one of the world’s top teams of leading experts, the John Maxwell Team. He is also a Fellow of the Nigerian Institute of Management Consultants. </p>
 
-            <p class="text-justify">As a leader par excellence, he wears many hats: Human Resource Developer, Researcher, Administrator, Fitness Coach/Martial Art Instructor, Management Consultant, Marriage/Relationship Coach, and profound and prolific Author. He is widely traveled, blessing and changing lives across the world. He is happily married to Pastor Mrs. Chinyere Abba and blessed with four Children.</p>
+            <p class="text-justify">As a leader par excellence, he wears many hats; Life Coach, Fitness/Martial Art Instructor, Management Consultant, Marriage/Relationship Coach, a  profound and prolific Author. He is widely traveled, blessing and changing lives across the globe. He is happily married to Pastor Mrs. Chinyere Abba and they are blessed with four lovely Children.</p>
             
           </div>
         </div>

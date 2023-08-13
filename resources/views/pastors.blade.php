@@ -30,7 +30,7 @@
             <h3 class="line-bottom">Rev. Godwin Abba </h3>
             <h5 class="text-theme-colored">President and Founder</h5>
             <p class="text-justify">Rev. Godwin Abba is the  President and Founder of Word Alive Centre International, one of the leading and fast-growing Churches in Abuja, Nigeria, tasked with restoring,  transforming, and repositioning lives, Families, and Nations for exceptional exploits and impacts on their world. He is the CEO of Infinite Leadership and Management Consult Ltd, a trained Marketer, a certified coach, speaker, and trainer with one of the world’s top teams of leading experts, the John Maxwell Team. He is also a Fellow of the Nigerian Institute of Management Consultants. </p>
-            <p class="text-justify">As a leader par excellence, he wears many hats: Human Resource Developer, Researcher, Administrator, Fitness Coach/Martial Art Instructor, Management Consultant, Marriage/Relationship Coach, and profound and prolific Author. He is widely traveled, blessing and changing lives across the world. He is happily married to Pastor Mrs. Chinyere Abba and blessed with four Children.</p>
+            <p class="text-justify">As a leader par excellence, he wears many hats; Life Coach, Fitness/Martial Art Instructor, Management Consultant, Marriage/Relationship Coach, a  profound and prolific Author. He is widely traveled, blessing and changing lives across the globe. He is happily married to Pastor Mrs. Chinyere Abba and they are blessed with four lovely Children.</p>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@
                             <div class="team-upper-block  text-center">
                                 <img class="img-fullwidth" src="/images/pastors/pst_chinyere.jpg" alt="">
                                 <h4 class="mt-20 pb-0 p-10" style="margin-bottom: 1px;">Pastor Chinyere S. Abba</h4>
-                                <p class="p-10 pt-0"><b>Assistant Senior Pastor.</b></p>
+                                <p class="p-10 pt-0"><b>Co. Senior Pastor</b></p>
                             </div>
                             
                         </div>
