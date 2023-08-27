@@ -5,7 +5,7 @@
             <div class="row">
               <div class="col-md-6 col-md-push-3">
                 <div class="text-center mb-30"><a href="/">
-                    <img alt="" src="/images/logo-wide.png" style="width: 300px;"></a></div>
+                    <img alt="" src="/images/logo-wide-white.png" style="width: 300px;"></a></div>
                 <div class="bg-lightest border-1px p-25">
                   <h4 class="text-theme-colored text-uppercase m-0">Partnership Login Form</h4>
                  
