@@ -142,7 +142,7 @@
     <div class="container pt-70 pb-40">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center">
-          <img src="/images/logo-wide-white.png" alt="">
+          <img src="/images/logo-wide-white.png" width="60%">
           <p class="mt-20 mb-20" style="color: white;">
           As a Church centered on Jesus and his gospel, our utmost priority is to ensure that all individuals are treated with dignity and respect. We firmly believe in upholding the values of fairness and honor, valuing each person for who they are.</p>
           <ul class="styled-icons icon-dark icon-circled icon-sm mb-40">

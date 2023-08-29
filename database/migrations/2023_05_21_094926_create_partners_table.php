@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('address');
             $table->string('plan');
+            $table->string('remember_token')->nullable();
             $table->boolean('mail')->nullable();
             $table->boolean('sms')->nullable();
             $table->boolean('call')->nullable();

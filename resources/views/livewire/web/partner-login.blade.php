@@ -1,4 +1,4 @@
-<section id="home" class="divider parallax layer-overlay overlay-dark-9" data-bg-img="http://placehold.it/1920x1280" style="background-image: url(&quot;http://placehold.it/1920x1280&quot;); background-position: 50% -82px;">
+<section id="home" class="divider parallax layer-overlay overlay-dark-9">
       <div class="display-table">
         <div class="display-table-cell">
           <div class="container pb-100">
@@ -16,6 +16,11 @@
                              {{ $message }}.
                         </div>
                         @enderror
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <label class="form-label">Email Address</label>
@@ -32,13 +37,14 @@
                         <div class="col-sm-12 col-md-6  ">
                             <label class="form-label">Password</label>
                             <div class="form-group mb-0">
-                            <input wire:model.lazy="password" class="form-control" type="password" placeholder="Enter password">
+                              <input wire:model.lazy="password" class="form-control" type="password" placeholder="Enter password">
                             </div>
                             @error('password') 
                                 <span class="text-danger">
                                     {{ $message }}
                                 </span>
                             @enderror
+                            <div class="text-right"><a href="{{ route('partner.reset.password') }}" class="text-danger">Forgot password?</a></div>
                         </div>
                     </div>
 
@@ -52,7 +58,6 @@
                             <a class="text-primary transition-colors hover:text-primary-focus dark:text-accent-light dark:hover:text-accent" href="{{ route('partner.join') }}">Create account</a>
                         </p>
                     </div>
-
                   <!-- Appointment Form Validation-->
                 </div>
               </div>

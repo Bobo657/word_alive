@@ -6,7 +6,7 @@ use App\Http\Livewire\Admin\{RegisteredMembers, Events, PartnersList, UploadLive
 use App\Http\Livewire\Admin\Dashboard;
 use App\Http\Livewire\Web\MemberRegistration;
 use App\Http\Livewire\Admin\{MembersDepartmentList, PartnerDonations};
-use App\Http\Livewire\Web\{Partnership, PartnerLogin, PartnerDashboard};
+use App\Http\Livewire\Web\{Partnership, PartnerLogin, PartnerDashboard, PartnerPasswordReset, PartnerChangePassword};
 use Illuminate\Support\Facades\Redirect;
 
 /*
@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Redirect;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
+Route::view('/email', 'emails.partner.password_reset');
+
 
 //auth()->loginUsingId(1);
 
@@ -40,6 +40,9 @@ Route::get('/verify/payment', [WebsiteController::class, 'verifyPayment']);
 
 Route::get('/partner/login', PartnerLogin::class)->name('partner.login')->middleware(['notGuard']);
 Route::get('/donation/join', Partnership::class)->name('partner.join')->middleware('notGuard');
+Route::get('/partner/reset/password', PartnerPasswordReset::class)->name('partner.reset.password')->middleware('notGuard');
+Route::get('/partner/change/password/{email}/{token}', PartnerChangePassword::class)->name('partner.change.password')->middleware('notGuard');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/members/list', RegisteredMembers::class)->name('members.list');
