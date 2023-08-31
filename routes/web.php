@@ -21,9 +21,6 @@ use Illuminate\Support\Facades\Redirect;
 */
 
 Route::view('/', 'welcome');
-Route::view('/email', 'emails.partner.password_reset');
-
-
 //auth()->loginUsingId(1);
 
 Route::view('/contact_us', 'contact');
