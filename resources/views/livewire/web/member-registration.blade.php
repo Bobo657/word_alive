@@ -153,7 +153,7 @@
                 </div>
 
                 <div class="form-group mb-10">
-                    <label class="form-label">Please choose the department you wish to join.</label>
+                    <label class="form-label">Please choose the department you wish to join or you belong to.</label>
                     <select class="form-control"  wire:model.lazy="department_id">
                         <option value="">Select Department</option>
                         @foreach($departments as $department)
@@ -166,6 +166,12 @@
                         </span>
                     @enderror
                 </div>
+                @if (session()->has('message'))
+                <div class="alert alert-success alert-dismissable">
+                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button"> × </button>
+                    Success! {{ session('message') }}.
+                </div>
+                @endif
                 <div class="form-group">
                     <button type="button" wire:click="saveMember()" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" >Join Now</button>
                 </div>

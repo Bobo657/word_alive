@@ -40,7 +40,7 @@ return [
 
     'classes' => [ 
         'AMMC' => 'Alive membership and maturity class',
-        'ALMA' => 'Alive Leadership and Leadership Academy',
+        'ALMA' => 'Alive Leadership and Ministry Academy',
         'None' => 'None'
     ],
 

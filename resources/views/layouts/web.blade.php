@@ -111,6 +111,7 @@
               <li><a href="/about_us">About Us</a></li>
               <li><a href="/ministries">Ministries</a></li>
               <li><a href="/our_pastors">Our Pastors</a></li>
+              <li><a href="/#livestream">Live Stream</a></li>
               <li><a href="/events">Events</a></li>
               @auth('partner')
                 <li><a href="{{ route('partner.dashboard') }}">Partner Dashboard</a></li>

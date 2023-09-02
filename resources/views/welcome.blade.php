@@ -721,7 +721,7 @@
   </section>
 
   <!-- Diver: Video Background  -->
-  <section class="divider parallax layer-overlay overlay-theme-colored-9" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7">
+  <section class="divider parallax layer-overlay overlay-theme-colored-9" data-bg-img="http://placehold.it/1920x1280" data-parallax-ratio="0.7" id="livestream">
     <div class="container pt-60 pb-40"> 
       <!-- Section Content -->
       <div class="section-content">
