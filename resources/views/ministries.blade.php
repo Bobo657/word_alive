@@ -76,7 +76,8 @@
                             <h3 class="icon-box-title pt-15 mt-0 mb-40">Alive Greeters</h3>
                             <img src="/images/departments/greeters.jpeg" alt="">
                             <hr>
-                            <p class="text-gray">The greeters are the first loving touch every guest meets, which sets the stage for people to be open to a life of  transformation in all services. They eliminate gloominess, sadness and moodiness from the face of the people and replace it with encouragement. Greeters are tour guide who takes people to their destination with just a warmth smile and firm assurance of Gods’ blessing as you approach and walk through the Church doors.</p>
+                            <p class="text-gray">
+                                
                             
                         </div>
                     </div>
@@ -96,6 +97,7 @@
                             <i class="pe-7s-users"></i>
                             </a>
                             <h3 class="icon-box-title pt-15 mt-0 mb-40">Alive Steppers</h3>
+                            <img src="/images/departments/steppers.jpeg" alt="">
                             <hr>
                             <p class="text-gray">Alive Steppers are praise dancers committed to offering their temples as living sacrifices to God, as they motivate and inspire the congregation through dance. Their sole aim is to glorify God through this. Their dance are structured to gospel music and inspirational messages.</p>
                         </div>
@@ -106,7 +108,7 @@
                             <i class="pe-7s-users"></i>
                             </a>
                             <h3 class="icon-box-title pt-15 mt-0 mb-40">Alive Teenagers</h3>
-                            <img src="/images/departments/prayer_dept.jpeg" alt="">
+                            
                             <hr>
                             <p class="text-gray">The Alive Teens department prepares the young adult for the Adult Church. This department provide the basic platform for training through the word of God, Prayers, Counselling and guidance to understanding real life issues, consequences of actions and decision taken and how to effectively transit from a teen to a responsible Youth.</p>
                             
@@ -163,8 +165,11 @@
                             <a href="#" class="icon icon-gray pull-left mb-0 mr-10">
                             <i class="pe-7s-users"></i>
                             </a>
+                            
                             <h3 class="icon-box-title pt-15 mt-0 mb-40">Alive Victory Force</h3>
+                            <img src="/images/departments/prayer_dept.jpeg" alt="">
                             <hr>
+                            
                             <p class="text-gray">This department is charged with the responsibility of praying for the Church and its members. This department also prays for upcoming programs and oversees daily prayers. Members of this department are also called  to pray and intercede for God’s people and to encourage and assist each other in personal and corporate prayers. They do this by praying in faith in the name of our Lord Jesus Christ, relentlessly opposing the works of Satan in the lives of the people of God and establishing dominion and breakthrough everywhere while encouraging others to do the same.</p>
                             
                         </div>
