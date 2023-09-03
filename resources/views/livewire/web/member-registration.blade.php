@@ -62,7 +62,7 @@
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group mb-10">
                     <label class="form-label">Phone Number</label>
-                      <input wire:model.lazy="phone" class="form-control" type="tel" id="telephone" name="telephone"  placeholder="+234 7035205714" >
+                      <input wire:model.lazy="phone" class="form-control" type="tel" id="telephone" name="telephone"  placeholder="07035205714" >
                       @error('phone') 
                         <span class="text-danger">
                             {{ $message }}
@@ -74,6 +74,7 @@
                     <div class="form-group mb-10">
                     <label class="form-label">Date of Birth</label>
                       <input wire:model.lazy="dob" class="form-control required" type="text" placeholder="2018-03-19">
+                      <small class="text-warning">Please enter dob in this format Y-M-D (2018-03-19) </small>
                         @error('dob') 
                         <span class="text-danger">
                             {{ $message }}
