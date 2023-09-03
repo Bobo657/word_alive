@@ -185,7 +185,7 @@
                                             <p class="mb-0 font-w500">{{ $birthday->dob->format('jS F ') }}</p>	
                                         </td>
                                     </tr>
-                                    @empty
+                                @empty
                                     <tr>
                                     <div class="noresult" >
                                         <div class="text-center py-4">
@@ -195,7 +195,7 @@
                                         </div>
                                     </div>
                                     </tr>
-                                    @endforelse
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

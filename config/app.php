@@ -57,6 +57,7 @@ return [
         'Gwagwa - Abuja',
         'Gwagwalada - Abuja',
         'Gwarimpa - Abuja', 
+        'Jahi/Next Cash and Carry - Abuja',
     	'Kaduna road - Kaduna',
       	'Karmo - Abuja',
         'Karu - Abuja',
