@@ -27,7 +27,7 @@ class MemberRegistration extends Component
         return [
             'name' => 'required|string|max:255',
             'email' => 'nullable|email|max:255|unique:members,email',
-            'phone' =>  ['nullable', 'regex:/^(\+\d{1,3})?\s?(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$/', 'unique:members,phone'],
+            'phone' =>  ['nullable', 'unique:members,phone'],
             'marital_status' => ['required',Rule::in(config('app.marital_status'))],
             'gender' => 'required|in:male,female',
             'address' => 'required|string|max:255',
