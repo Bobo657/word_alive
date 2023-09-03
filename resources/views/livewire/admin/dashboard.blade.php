@@ -191,7 +191,7 @@
                                         <div class="text-center py-4">
                                             <i class="ph-magnifying-glass fs-1 text-primary"></i>
                                             <h5 class="mt-2">Sorry! No Result Found</h5>
-                                            <p class="text-muted mb-0">No birthday for the of {{ date('F')}} was found in the database.</p>
+                                            <p class="text-muted mb-0">No birthday for the month of {{ date('F')}} was found in the database.</p>
                                         </div>
                                     </div>
                                     </tr>
