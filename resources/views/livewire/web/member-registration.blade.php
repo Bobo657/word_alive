@@ -73,7 +73,7 @@
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group mb-10">
                     <label class="form-label">Date of Birth</label>
-                      <input wire:model.lazy="dob" class="form-control required" type="date" placeholder="Date of birth">
+                      <input wire:model.lazy="dob" class="form-control required" type="text" placeholder="2018-03-19">
                         @error('dob') 
                         <span class="text-danger">
                             {{ $message }}
@@ -174,6 +174,13 @@
                 @endif
                 <div class="form-group">
                     <button type="button" wire:click="saveMember()" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" >Join Now</button>
+                </div>
+
+                <div class="mt-4 text-center text-xs+">
+                    <p class="line-clamp-1">
+                    <a class="text-primary transition-colors hover:text-primary-focus dark:text-accent-light dark:hover:text-accent" href="/">Go back to Homepage
+                        </a>
+                    </p>
                 </div>
             
               <!-- Appointment Form Validation-->
