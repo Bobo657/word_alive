@@ -182,7 +182,7 @@
                                             <p class="mb-0 font-w500">{{ ucFirst($birthday->gender) }} </p>	
                                         </td>
                                         <td>
-                                            <p class="mb-0 font-w500">{{ $member->dob->format('jS F ') }}</p>	
+                                            <p class="mb-0 font-w500">{{ $birthday->dob->format('jS F ') }}</p>	
                                         </td>
                                     </tr>
                                     @empty
